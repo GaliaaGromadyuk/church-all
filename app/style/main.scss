@@ -1,0 +1,490 @@
+@import 'fonts';
+@import 'var';
+@import 'reset';
+@import 'default';
+
+.w-100{
+	width: 100%;
+}
+
+body{
+	background: $background;
+}
+
+svg{
+	max-width:21px;
+	max-height:21px;
+}
+
+$select-width: 220px;
+$select-height: 40px; 
+
+.b-w{
+	background: $wh;
+}
+.m-15{
+	
+}
+.fixed{
+  position: fixed;
+  top: 0;
+}
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.block-title{
+	font-weight: 700;
+	color: $main;
+	text-align: center;
+	text-transform: uppercase;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $wh;
+  width: $select-width;
+  height: $select-height;
+}
+.select-styled {
+  	position: absolute; 
+  	width: 100%;
+  	top: 0;
+ 	right: 0;
+  	bottom: 0;
+ 	left: 0;
+  	border: 1px solid $text-light;
+	border-radius: 100px;
+	padding: 8px 12px;
+	font-size: 0.8rem;
+	z-index: 2;
+  	transition: all 0.2s ease-in;
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-color: $wh transparent transparent transparent;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+  }
+  &:hover {
+    background-color: darken($main, 2);
+  }
+  &:active, &.active {
+    background-color: darken($main, 5);
+    &:after {
+      top: 9px;
+      border-color: transparent transparent $wh transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: calc(100% - 21px);
+  right: 0;
+  left: 0;
+  z-index: 1;
+  border: 1px solid $main;
+  margin: 0;
+  padding: 0; 
+  padding-top: 20px;
+  list-style: none;
+  background-color: darken($main, 5);
+  li {
+    margin: 0;
+    padding: 12px 10px;
+    border-top: 1px solid darken($main, 10);
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: $main;
+      background: $wh;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+.btn{
+	padding: 0.5rem;
+	font-size: 0.8rem;
+	border-radius: 60px;
+	font-weight: 500;
+	text-align: center;
+	display: inline-block;
+	transition: all 0.15s;
+	position: relative;
+	text-transform: uppercase;
+	&:hover{
+		box-shadow: none !important;
+	}
+}
+
+.btn-blue{
+	background: $text-s;
+	color: $wh;
+	box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.25);
+	&:hover{
+		background: $main-s;
+	}
+}
+
+.title{
+	display: flex;
+	padding: 2.5rem 0;
+	padding-bottom: 1.5rem;
+	justify-content: center;
+	&-all{
+		margin-right: 0.5rem;
+		display: none;
+		transition: all 0.2s;
+		color: $text-s;
+		font-size: 1rem;
+		font-weight:700;
+		text-transform: uppercase;
+		&:hover{
+				color: $text;
+		}
+		img{
+			margin-right: 0.25rem;
+		}
+	}
+	h2{
+		margin-bottom: 0;
+	}
+}
+.block:hover{
+	.title-all{
+		display: flex;
+		align-items: center;
+	}
+}
+
+.slick-dots li.slick-active button:before{
+	    border: 1px solid $wh;
+}
+.slick-dots li button:before{
+	line-height: 19px;
+	font-size: 15px;
+}
+.slick-dots li.slick-active button:before{
+	color: $main-s;
+}
+.slick-dots{
+	padding-right: 3rem;
+	text-align: right;
+    bottom: 50px;
+}
+.slick-dotted.slick-slider{
+	margin-bottom: 0;
+}
+.header{
+	background: $main;
+	color: $wh;
+	padding: 1rem 0;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	.mobile-menu{
+		display: none;
+	}
+	.search-mob{
+		display: none;
+		width: 45px;
+		height:45px;
+		position: relative;
+		input {
+			outline: none;
+		}
+		input[type=search] {
+			-webkit-appearance: textfield;
+			-webkit-box-sizing: content-box;
+			font-family: inherit;
+			font-size: 100%;
+		}
+		input::-webkit-search-decoration,
+		input::-webkit-search-cancel-button {
+			display: none; 
+		}
+
+
+		input[type=search] {
+			background: url('../img/icon/search.svg') no-repeat 9px center;
+			background-size: 50%;
+			background-position: center;
+			border: solid 1px $wh;
+			border-radius:10rem;
+			width: 42px;
+			height: 42px;
+			transition: all .5s;
+			z-index:50;
+		}
+
+
+		input:-moz-placeholder {
+			color: #999;
+		}
+		input::-webkit-input-placeholder {
+			color: #999;
+		}
+		input[type=search] {
+			color: transparent;
+			cursor: pointer;
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+		input[type=search]:hover {
+			background-color: #fff;
+		}
+		input[type=search]:focus {
+			width: 200px;
+			padding-left: 32px;
+			color: #000;
+			background-color: #fff;
+			cursor: auto;
+		}
+		input:-moz-placeholder {
+			color: transparent;
+		}
+		input::-webkit-input-placeholder {
+			color: transparent;
+		}
+	}
+	&-col{
+		align-items: center;
+	}
+	&-menu{
+		h3{
+			font-weight: 500;
+			color: $main-s;
+			text-transform: uppercase;
+		}
+		ul{
+			flex-direction: column;
+		}
+		ul li a{
+			color: $wh;
+			font-size: 0.8rem;
+			display: inline-block;
+			&:after {
+			    display: block;
+			    content: "";
+			    height: 1px;
+			    width: 0%;
+			    background-color: $main-s;
+			    transition: width .3s ease-in-out;
+			}
+			&:hover:after,
+			&:focus:after {
+			    width: 100%;
+			}
+		}
+		ul li.current-menu-item > a:after{
+			width: 100%;
+		}
+	}
+	&-logo{
+		max-width: 15rem;
+		margin-bottom: 0.6rem;
+	}
+	&-city{
+		font-size: 0.8rem;
+		color: $text-light;
+		display: flex;
+		align-items: center;
+		max-width: 15rem;
+		span{
+			white-space: nowrap;
+		    margin-right: 0.5rem;
+		}
+	}
+	&-enter{
+		color: $main-s;
+		font-size: 0.8rem;
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+	    svg{
+	    	margin-right: 0.5rem;
+	    	fill: $main-s;
+	    }
+	}
+	&-search{
+		display: flex;
+		margin: 0.75rem 0;
+		position: relative;
+		.searchTerm{
+			width: 100%;
+			background: none;
+		    color: white;
+		    border: 1px solid $text-s;
+		    border-radius: 50px;
+		    padding: 0.75rem 1rem;
+		}
+		.searchTerm::-webkit-input-placeholder { 
+			color: $text-s;
+			font-size: 0.8rem; 
+		}
+	    .searchTerm:-ms-input-placeholder { 
+	    	color: $text-s;
+	    	font-size: 0.8rem; 
+	    }
+	    .searchTerm::-ms-input-placeholder { 
+	    	color: $text-s;
+	    	font-size: 0.8rem; 
+	    }
+	    .searchTerm::placeholder { 
+	    	color: $text-s;
+	    	font-size: 0.8rem; 
+	    } 
+	    button{
+	    	position: absolute;
+		    font-size: 1.2rem;
+		    background: none;
+		    border: none;
+		    padding: 0.5rem;
+		    right: 10px;
+		    z-index: 3;
+		    cursor: pointer;
+		    color: white;
+		    transition: all 0.2s;
+		    &:hover{
+		    	color: $main-s;
+		    }
+	    }
+	}
+	&-language{
+	    display: flex;
+	    align-self: center;
+	    margin-left: 0.75rem;
+	    	.select-styled:active:after, .select-styled.active:after{
+		    transform: rotate(0deg);
+		    top: 9px;
+	}
+		.select {
+		  width: 45px;
+		  height: 45px;
+		}
+		.select-styled{
+			padding: 8px 6px;
+		    text-align: left;
+	        line-height: 1.6;
+		}
+		.select-styled:after{
+			right: 5px;
+		}
+		.select-options{
+		    border-radius: 0 0 25px 25px;
+		    li:last-child{
+	    	    border-radius: 0 0 25px 25px;
+		    }
+		}
+	}
+	&-right{
+		text-align: right;
+	}
+	&-btn{
+		display: flex;
+		.btn{
+			padding:0.8rem 3rem;
+			margin-right: 0.75rem;
+			width:100%;
+		    display: flex;
+		    justify-content:center;
+		    align-items: center;
+			svg{
+				margin-right: 0.5rem;
+				fill: $wh;
+			}
+		}
+	}
+}
+
+.footer{
+	margin-top: 3rem;
+
+	&-top{
+		padding:1.7rem 0;
+		background: #efefef;
+	}
+	&-bottom{
+		background: #e4e4e4;
+		font-size: 0.6rem;
+	}
+	.social-icon__item{
+		height: 32px;
+		width: 32px;
+		margin:0 0.375rem;
+		font-size: 0.8rem;
+		box-shadow: none;
+	}
+	&-city{
+		display: flex;
+		align-items: center;
+		
+		span{
+			margin-right: 0.5rem;
+		}
+	}
+	.communication{
+		&-social{
+			margin-top: 1rem;
+			img{
+				max-width:35px;
+				max-height:35px;
+			}
+		}
+		.tel{
+			color: $text;
+		}
+		.tel:hover{
+			color: $main;
+		}
+	}
+	.social{
+		font-size: 0.8rem;
+		p{
+			margin: 0;
+		}
+	}
+	.address{
+		font-size: 0.8rem;
+	}
+	.select{
+		color: $text;
+	}
+	.select-styled:after{
+		    border-color: $text transparent transparent transparent;
+	}
+	.select-styled:active, .select-styled.active{
+		background-color: $main-s;
+	}
+	.select-styled:hover {
+	    background-color:$main-s;
+	}
+	.select-options{
+		 background-color:$main-s;
+		 border: none;
+		 li{
+		 	border-top:none;
+		 }
+	}
+	.select-styled:active:after, .select-styled.active:after{
+		    transform: rotate(180deg);
+	}
+	.social-icon__items{
+		position: static;
+	}
+}
+
+
+@import 'home';
+@import 'media';
