@@ -29,16 +29,25 @@ $select-height: 40px;
   position: fixed;
   top: 0;
 }
+.logo-col{
+	z-index: 100;
+}
 .select-hidden {
   display: none;
   visibility: hidden;
   padding-right: 10px;
+}
+.dis-none{
+	display: none;
 }
 .block-title{
 	font-weight: 700;
 	color: $main;
 	text-align: center;
 	text-transform: uppercase;
+}
+.scroll-none{
+	transition: all 0.5s;
 }
 .select {
   cursor: pointer;
@@ -87,28 +96,100 @@ $select-height: 40px;
 .select-options {
   display: none; 
   position: absolute;
-  top: calc(100% - 21px);
+  top:100%;
   right: 0;
   left: 0;
   z-index: 1;
   border: 1px solid $main;
   margin: 0;
   padding: 0; 
-  padding-top: 20px;
+  padding-top: 0;
   list-style: none;
   background-color: darken($main, 5);
+  border-radius: 10px;
   li {
     margin: 0;
     padding: 12px 10px;
-    border-top: 1px solid darken($main, 10);
+    // border-top: 1px solid darken($main, 10);
     transition: all 0.2s ease-in;
+    border-radius: 10px;
     &:hover {
       color: $main;
       background: $wh;
+
     }
     &[rel="hide"] {
       display: none;
     }
+  }
+}
+.header-search .searchTerm:focus{
+	outline: none;
+}
+
+.mobile-btn{
+	display: none;
+}
+
+$buttonWidth: 30px;
+$buttonHeight: 26px;
+$buttonColor: darken($wh, 15%);
+$lineThickness: 4px;
+$transitionSpeed: .25s;
+$transitionEasing: ease-in-out;
+
+// Demo
+.menu-toggle {
+  position: relative;
+  display: block;
+  width: $buttonWidth;
+  height: $buttonHeight;
+  
+  background: transparent;
+  border-top: $lineThickness solid;
+  border-bottom: $lineThickness solid;
+  
+  color: $buttonColor;
+  font-size: 0;
+      border-left: 0;
+    border-right: 0;
+  
+  transition: all $transitionSpeed $transitionEasing;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: $lineThickness;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    background: currentColor;
+    
+    transform: translate(-50%, -50%);
+    transition: transform $transitionSpeed $transitionEasing;
+  } 
+  &:focus{
+  	outline: none;
+  }
+}
+
+button:hover {
+  color: lighten($buttonColor, 15%);
+}
+
+button.is-active {
+  border-color: transparent;
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 
@@ -187,11 +268,14 @@ $select-height: 40px;
 }
 .header{
 	background: $main;
+	-webkit-transform: translateZ(0);
 	color: $wh;
 	padding: 1rem 0;
 	width: 100%;
 	top: 0;
 	z-index: 999;
+	position: fixed;
+	transition: all 0.5s;
 	.mobile-menu{
 		display: none;
 	}
@@ -260,15 +344,18 @@ $select-height: 40px;
 	}
 	&-col{
 		align-items: center;
+		transition: all 0.5s;
 	}
 	&-menu{
 		h3{
 			font-weight: 500;
 			color: $main-s;
 			text-transform: uppercase;
+			position: relative;
 		}
 		ul{
 			flex-direction: column;
+			// transition: all 0.3s;
 		}
 		ul li a{
 			color: $wh;
@@ -294,6 +381,9 @@ $select-height: 40px;
 	&-logo{
 		max-width: 15rem;
 		margin-bottom: 0.6rem;
+		transition: all 0.3s;
+		display: block;
+		width: 15rem;
 	}
 	&-city{
 		font-size: 0.8rem;
@@ -312,9 +402,17 @@ $select-height: 40px;
 	    display: flex;
 	    justify-content: flex-end;
 	    align-items: center;
+	    transition: all 0.2s;
+	    &:hover{
+	    	color: $wh;
+	    	svg{
+	    		fill: $wh;
+	    	}
+	    }
 	    svg{
 	    	margin-right: 0.5rem;
 	    	fill: $main-s;
+	    	transition: all 0.2s;
 	    }
 	}
 	&-search{
@@ -383,6 +481,11 @@ $select-height: 40px;
 		}
 		.select-options{
 		    border-radius: 0 0 25px 25px;
+		    top: calc(100% - 20px);
+		    padding-top: 20px;
+		    li{
+		    	border-radius: 0;
+		    }
 		    li:last-child{
 	    	    border-radius: 0 0 25px 25px;
 		    }
@@ -405,6 +508,48 @@ $select-height: 40px;
 				fill: $wh;
 			}
 		}
+	}
+}
+
+.header .calendar-none{
+	background: none;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    box-shadow: none;
+    border: 1px solid;
+	span{
+		display: none;
+	}
+	svg{
+		margin-right: 0;
+	}
+}
+.header-menu-open{
+	 &:after{
+	    	content: "\f0de";
+	    	position: absolute;
+	    	top: 215%;
+		    font-family: FontAwesome;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    color: #7d9da7;
+	    }
+	& + ul{
+		flex-direction: row;
+		width: 100vw;
+		position: fixed;
+		-webkit-transform: translateZ(0);
+		background: #7d9da7;
+		height: 60px;
+		left: 0;
+		top: 100%;
+	    padding-left: 20%;
+	    li{
+	    	margin-right: 3rem;
+	    	display: inline-block;
+    		padding: 0.6rem 0;
+	    }
 	}
 }
 
