@@ -38,7 +38,8 @@ $select-height: 40px;
   padding-right: 10px;
 }
 .dis-none{
-	display: none;
+	height: 0;
+	overflow: hidden;
 }
 .block-title{
 	font-weight: 700;
@@ -544,8 +545,11 @@ button.is-active {
 		height: 60px;
 		left: 0;
 		top: 100%;
-	    padding-left: 20%;
-	    li{
+		// padding-left: 20%;
+		display: flex;
+		justify-content: center;
+		transition: .4s;
+		li{
 	    	margin-right: 3rem;
 	    	display: inline-block;
     		padding: 0.6rem 0;
