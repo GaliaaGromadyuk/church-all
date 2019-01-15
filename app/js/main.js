@@ -25,8 +25,7 @@ $(document).ready(function($) {
                     $('.header-btn').css('align-items', 'center');
                     $('.header-menu ul').addClass('dis-none');
                      $('.header-menu h3').on('click', function() {
-                            $(this).addClass('header-menu-open');
-                            $(this).next().slideIn('fast');
+                            $(this).toggleClass('header-menu-open');
                         });
                      }else{
                     // $('.first-screen__slide').css('margin-top', '0');
@@ -80,32 +79,32 @@ $(document).ready(function($) {
 
      
 
-    $(function() {
-        var Accordion = function(el, multiple) {
-            this.el = el || {};
-            this.multiple = multiple || false;
+    // $(function() {
+    //     var Accordion = function(el, multiple) {
+    //         this.el = el || {};
+    //         this.multiple = multiple || false;
 
-            // Variables privadas
-            var links = this.el.find('.link');
-            // Evento
-            links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-        }
+    //         // Variables privadas
+    //         var links = this.el.find('.link');
+    //         // Evento
+    //         links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+    //     }
 
-        Accordion.prototype.dropdown = function(e) {
-            var $el = e.data.el;
-                $this = $(this),
-                $next = $this.next();
+    //     Accordion.prototype.dropdown = function(e) {
+    //         var $el = e.data.el;
+    //             $this = $(this),
+    //             $next = $this.next();
 
-            $next.slideToggle();
-            $this.parent().toggleClass('open');
+    //         $next.slideToggle();
+    //         $this.parent().toggleClass('open');
 
-            if (!e.data.multiple) {
-                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-            };
-        }   
+    //         if (!e.data.multiple) {
+    //             $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+    //         };
+    //     }   
 
-        var accordion = new Accordion($('#accordion'), false);
-    });
+    //     var accordion = new Accordion($('#accordion'), false);
+    // });
     // HUMBURGER MENU end
 
 

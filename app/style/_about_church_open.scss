@@ -1,0 +1,17 @@
+.about-church-open {
+    .first-screen {
+        background-image: url(../img/about_chorch/banner-about-church-open.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 22.5rem;
+        position: relative;
+        &__title {
+            span {
+                padding-left: 14.5rem;
+                display: inline-block;
+                margin-top: 1.2rem;
+            }
+        }
+    }
+}
