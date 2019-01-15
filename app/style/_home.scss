@@ -1,6 +1,6 @@
 .first-screen{
 	&__slide{
-		height: calc(100vh - 150px);
+		height:100vh;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -29,6 +29,9 @@
 	    margin: 0;
 	    text-transform: uppercase;
 	}
+}
+.first-row{
+	margin-bottom: 1.5rem;
 }
 .home{
 	background: $background;
@@ -152,7 +155,23 @@
 }
 
 .block-footer{
-	display: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $text-s;
+	padding: 1.5rem 0;
+	transition: all 0.2s;
+	&:hover{
+		color: $main;
+		svg{
+			fill: $main;
+		}
+	}
+	svg{
+		margin-right: 0.5rem;
+		fill: $text-s;
+		transition: all 0.2s;
+	}
 }
 
 .social-icon{
@@ -285,6 +304,7 @@
 	&-text{
 		padding: 2rem 0;
 		padding-left: 5rem;
+		display: block;
 	}
 	h2{
 		font-size: 1.75rem;

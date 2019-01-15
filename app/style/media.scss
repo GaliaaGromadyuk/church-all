@@ -18,22 +18,52 @@
 	}
 }
 
-@media (min-width : 1024px){
-	.header{
-		&:hover{
-			.scroll-none{
-				display: flex !important;
-			}
-			.header-col{
-				display: block !important;
-			}
-		}
+@media (max-width : 1200px){
+	html{
+		font-size: 18px;
 	}
+	// .header{
+	// 	&:hover{
+	// 		.scroll-none{
+	// 			display: flex !important;
+	// 		}
+	// 		.header-col{
+	// 			display: block !important;
+	// 		}
+	// 	}
+	// }
 }
 
 @media (max-width : 768px)   {
 	html{
 		font-size: 16px;
+	}
+	.accordion{
+		border-bottom: 1px solid #155163;
+	}
+	.accordion .link{
+	  position: relative;
+	  transition: all 0.4s ease;
+	  font-size: 1.25rem;
+	  color: $main-s;
+	  padding: 1.5rem;
+	  border-top: 1px solid #155163;
+	  margin-bottom:0;
+	}
+	.submenu {
+	  display: none;
+	  padding: 1.5rem 0;
+	  position: relative;
+	  &:after{
+	  	content: "";
+	  	background: $main-s;
+	  	height: 3px;
+	  	width: 30px;
+	  	top: 0;
+	  	left: 50%;
+	  	transform: translateX(-50%);
+	  	position: absolute;
+	  }
 	}
 	.first-screen__slide{
 		height: 50vh;
@@ -47,17 +77,19 @@
 	.header-language .select-styled{
 		font-size: 1rem;
 	}
+	.accordion .link{
+	    padding: 3rem;
+	}
 	.header{
 		position: fixed;
 		.mobile-menu{
 			display: block;
 			max-width: 35px;
-			svg{
-				max-width: 40px;
-				max-height: 30px;
-				margin-left: 2rem;
-				fill: $wh;
-			}
+			margin-left: 1rem;
+		}
+		&-menu ul li a{
+			font-size: 1rem;
+			padding-bottom: 1.75rem;
 		}
 		.search-mob{
 			display: block;
@@ -80,12 +112,41 @@
 		}
 		&-navigation{
 			display: none;
+			position: absolute;
+		    height: 100vh;
+		    background-color: $main;
+		    padding-top: 5rem;
+		    overflow-y: auto;
+		    left: 0;
+		    top: 4.5rem;
+		    .row{
+		    	flex-direction: column;
+		    	justify-content: center;
+		    	text-align: center;
+		    	align-items: center;
+		    }
+		    .mobile-btn{
+		    	display: none;
+			    justify-content: space-around;
+		        margin-top: 2rem;
+		        padding-bottom: 11rem;
+		        .search-mob input[type=search]:focus {
+    				width: 68vw;
+    			}
+		    	.header-btn{
+			    	display: flex;
+			    }
+			    .search-mob{
+			    	display: block;
+		    	    margin-right: 0.75rem;
+			    }
+		    }
 		}
 		&-language{
 			margin-left: 0;
 		}
 		&-nav{
-			display: none;
+			// display: none;
 		}
 		.header-btn{
 			.btn{
@@ -202,15 +263,6 @@
 			height: 150px;
 		}
 	}
-	.block-footer{
-		display: block;
-		color: $text-s;
-		text-align: center;
-		padding: 1.5rem 0;
-		img{
-			margin-right: 0.5rem;
-		}
-	}
 	.block:hover{
 		.title-all{
 			display: none;
@@ -242,6 +294,21 @@
 	.header .header-btn {
 		display: none;
 	}
+	.header-right{
+		justify-content: flex-end;
+	}
+	.header-navigation{
+		padding-top: 2rem;
+	}
+	.accordion .link{
+		padding: 1.5rem;
+	}
+	.header-navigation .mobile-btn{
+		display: flex;
+	}
+	.header-menu ul li a{
+			padding-bottom: 0.75rem;
+		}
 	.social-icon__item{
 		height: 45px;
 		width:45px;
