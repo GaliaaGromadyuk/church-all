@@ -18,7 +18,10 @@
 	}
 }
 
-@media (min-width : 1024px){
+@media (max-width : 1200px){
+	html{
+		font-size: 18px;
+	}
 	// .header{
 	// 	&:hover{
 	// 		.scroll-none{
