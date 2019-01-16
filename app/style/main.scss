@@ -267,6 +267,42 @@ button.is-active {
 .slick-dotted.slick-slider{
 	margin-bottom: 0;
 }
+.header-fixed{
+	padding: 0.5rem 0;
+	.scroll-none{
+		display: none;
+	}
+	.header-logo{
+		max-width: 11rem;
+	}
+	.header-col{
+		display: flex;
+	}
+	.accordion{
+		width: 100%;
+		align-items: center;
+	}
+	.header-navigation{
+		display: flex;
+	}
+	.header-menu h3{
+		margin-bottom: 0;
+	}
+	.mobile-btn{
+		display: flex;
+		align-items: center;
+		.search-mob{
+			display: block;
+			margin-right: 0.5rem;
+		}
+		.header-language{
+			display: none;
+		}
+	}
+	.header-btn{
+		align-items: center;
+	}
+}
 .header{
 	background: $main;
 	-webkit-transform: translateZ(0);
@@ -276,7 +312,11 @@ button.is-active {
 	top: 0;
 	z-index: 999;
 	position: fixed;
-	transition: all 0.5s;
+	  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 	.mobile-menu{
 		display: none;
 	}
@@ -326,9 +366,6 @@ button.is-active {
 		    top: 0;
 		    left: 0;
 		}
-		input[type=search]:hover {
-			background-color: #fff;
-		}
 		input[type=search]:focus {
 			width: 200px;
 			padding-left: 32px;
@@ -353,6 +390,7 @@ button.is-active {
 			color: $main-s;
 			text-transform: uppercase;
 			position: relative;
+			cursor: pointer;
 		}
 		ul{
 			flex-direction: column;
@@ -382,7 +420,12 @@ button.is-active {
 	&-logo{
 		max-width: 15rem;
 		margin-bottom: 0.6rem;
-		transition: all 0.3s;
+		transition: all 0.3s ease-in-out;
+		  -webkit-transition: all 0.3s ease-in-out;
+		  -moz-transition: all 0.3s ease-in-out;
+		  -ms-transition: all 0.3s ease-in-out;
+		  -o-transition: all 0.3s ease-in-out;
+		  transition: all 0.3s ease-in-out;
 		display: block;
 		width: 15rem;
 	}
@@ -530,7 +573,7 @@ button.is-active {
 	 &:after{
 	    	content: "\f0de";
 	    	position: absolute;
-	    	top: 215%;
+	    	top: 260%;
 		    font-family: FontAwesome;
 		    left: 50%;
 		    transform: translateX(-50%);
@@ -545,7 +588,6 @@ button.is-active {
 		height: 60px;
 		left: 0;
 		top: 100%;
-		// padding-left: 20%;
 		display: flex;
 		justify-content: center;
 		transition: .4s;
