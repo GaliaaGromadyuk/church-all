@@ -1,12 +1,19 @@
+@media(min-width: 2000px){
+	.first-screen-text {
+	    padding: 25rem 20rem;
+	    padding-left: 28rem;
+	}
+}
+
 @media (min-width: 1520px) {
   .container {
     max-width: 1480px; }
 }
 
 @media (max-width : 1500px)   {
-    .header-btn .btn{
-		padding: 0.8rem 1rem;
-	}
+ //    .header-btn .btn{
+	// 	padding: 0.8rem 1rem;
+	// }
 	.upcoming-event__name {
 	    padding: 0 0.5rem;
 	}
@@ -16,12 +23,18 @@
 	.home .advertisement__block{
 		padding-right: 2rem;
 	}
+	.header-logo{
+		max-width: 12rem;
+	}
 }
 
 @media (max-width : 1200px){
 	html{
 		font-size: 18px;
 	}
+	// .header-enter span{
+	// 	display: none;
+	// }
 	// .header{
 	// 	&:hover{
 	// 		.scroll-none{
@@ -34,10 +47,66 @@
 	// }
 }
 
-@media (max-width : 768px)   {
+@media (max-width: 1199px){
 	html{
 		font-size: 16px;
 	}
+	.header-btn .btn{
+	    padding: 0.8rem 2rem;
+	}
+	.header-fixed .header-btn .btn{
+		padding: 0;
+	}
+	.header-city{
+		display: none;
+	}
+	.header-logo{
+		max-width: 8rem;
+	}
+	.logo-col{
+		align-items: center;
+	    display: flex;
+	}
+	.header-fixed .header-logo{
+		max-width: 8rem;
+	}
+	.header-fixed{
+		.header-logo {
+		    max-width: 6rem;
+		}
+		.header-col{
+			text-align: center;
+		}
+		// .header-enter span{
+		// 	display: none;
+		// }
+		.header-logo{
+			margin-bottom: 0;
+		}
+		.mobile-btn{
+			.search-mob{
+				display: block;
+			}
+			.header-language{
+				display: none;
+			}
+		}
+	}
+	.footer .social{
+		margin-bottom: 1rem;
+	}
+	.translation-play img{
+		max-width: 4rem;
+	}
+	.translation-text{
+		padding: 1rem;
+	}
+	.social-icon{
+		width: 600px;
+	}
+}
+
+@media (max-width : 991px)   {
 	.accordion{
 		border-bottom: 1px solid #155163;
 	}

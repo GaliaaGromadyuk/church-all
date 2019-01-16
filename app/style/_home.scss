@@ -10,6 +10,7 @@
 	    padding: 7rem 11rem;
 	    padding-left: 8rem;
 		color: $wh;
+		margin-top: 10rem;
 	}
 	&-yellow{
 		font-size: 1.5rem;
@@ -28,6 +29,9 @@
 		max-width: 30rem;
 	    margin: 0;
 	    text-transform: uppercase;
+	}
+	.slick-arrow{
+		display: none !important;
 	}
 }
 .first-row{
@@ -61,6 +65,13 @@
 			background-size: cover;
 		}
 
+	}
+	.slick-next::before, .slick-prev::before{
+		font-size: 40px;
+	}
+	.slick-next, .slick-prev{
+		height: 40px;
+		width: 40px;
 	}
 	.advertisement{
 		background: $wh;
