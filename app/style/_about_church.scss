@@ -87,45 +87,51 @@
     margin-bottom: 5rem;
 }
 
-.about-church-desc__right,
-.about-church-desc__left {
-    margin-bottom: 1.5rem;
-    &:hover {
-        .about-church__read-more {
-            z-index: 2;
-        }
-    }
-}
-
 .about-church__img {
     display: block;
     width: 100%;
     position: relative;
     >img {
         width: 100%;
-        z-index: 1;
         position: relative;
     }
     .about-church__read-more {
         display: block;
-        padding: 2.9rem 2rem;
+        padding: 2.9rem 0;
         background-color: $main;
         position: absolute;
         bottom: 1.5rem;
         color: $wh;
         font-size: 0.9rem;
         text-transform: uppercase;
-        z-index: 0;
-    }
+        width: 0.75rem;
+        white-space: nowrap;
+        color: transparent;
+        text-align: center;
+        overflow: hidden;
+        transition: .3s;
+        }
     &_right {
         right: -0.75rem;
     }
     &_left {
         left: -0.75rem;
     }
+    // &:hover {
+    //     .about-church__read-more {
+    //         width: 240px;
+    //         color: #fff;
+    //     }
+    // }
+}
+
+.about-church-desc__right,
+.about-church-desc__left {
+    margin-bottom: 1.5rem;
     &:hover {
         .about-church__read-more {
-            z-index: 2;
+            width: 240px;
+            color: #fff;
         }
     }
 }
@@ -198,7 +204,7 @@
 
     .about-church__img {
         .about-church__read-more {
-            padding: 2.2rem 1.6rem;
+            padding: 2.2rem 0;
         }
     }
     
@@ -222,7 +228,7 @@
 
     .about-church__img {
         .about-church__read-more {
-            padding: 2rem 1.4rem;
+            padding: 2rem 0;
         }
     }
     
@@ -256,7 +262,7 @@
         margin: 0 auto 20px;
         .about-church__read-more {
             display: block;
-            padding: 2.4rem 1.6rem;
+            padding: 2.4rem 0;
             bottom: 1rem;
         }
     }
