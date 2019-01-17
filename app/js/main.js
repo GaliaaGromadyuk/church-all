@@ -82,9 +82,13 @@ $(document).ready(function ($) {
                 };
             }
 
+            var accordion = new Accordion($('#accordion'), false);
+        }
+    });
 
-var heightHeader = $('.header').height();
-$('.main').css('margin-top', heightHeader);
+
+    var heightHeader = $('.header').height();
+    $('.main').css('margin-top', heightHeader);
 
 
     // HUMBURGER MENU end
