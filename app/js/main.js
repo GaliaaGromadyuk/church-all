@@ -82,21 +82,12 @@ $(document).ready(function ($) {
                 };
             }
 
-<<<<<<< HEAD
-            var accordion = new Accordion($('#accordion'), false);
-        }
-    });
-
-=======
-
 
 var heightHeader = $('.header').height();
 $('.main').css('margin-top', heightHeader);
->>>>>>> 4fc755ba766dc0a901b205450bc2eda6dea87778
+
 
     // HUMBURGER MENU end
-
-<<<<<<< HEAD
     var heightHeader = $('.header').height();
     $('.main').css('margin-top', heightHeader);
 
@@ -104,16 +95,7 @@ $('.main').css('margin-top', heightHeader);
 
     // SELECT STYLE start
     $('select').each(function () {
-=======
-var heightFooter = $('.footer').height();
-// $('.main').css('height', 'calc(100% - ' + heightFooter + 'px - ' + heightHeader + 'px)' );
-// $('body').css('height', 'calc(100% - ' + heightFooter + 'px)' );
 
-
-
-// SELECT STYLE start
-	$('select').each(function(){
->>>>>>> 4fc755ba766dc0a901b205450bc2eda6dea87778
         var $this = $(this), numberOfOptions = $(this).children('option').length;
 
         $this.addClass('select-hidden');
