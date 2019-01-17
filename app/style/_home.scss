@@ -1,6 +1,5 @@
 .first-screen{
 	&__slide{
-		height:100vh;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -10,7 +9,6 @@
 	    padding: 7rem 11rem;
 	    padding-left: 8rem;
 		color: $wh;
-		margin-top: 10rem;
 	}
 	&-yellow{
 		font-size: 1.5rem;

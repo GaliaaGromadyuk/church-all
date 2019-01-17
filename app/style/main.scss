@@ -19,6 +19,8 @@ svg{
 $select-width: 220px;
 $select-height: 40px; 
 
+.slick-slide { -webkit-transform: translate3d(0,0,0); }
+
 .b-w{
 	background: $wh;
 }

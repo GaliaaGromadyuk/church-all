@@ -10,7 +10,7 @@ $(document).ready(function($) {
     var mq991min = window.matchMedia( "(min-width: 991px)" );
       if (mq991min.matches) {
         $('.link').click(function() {
-            if($(window).scrollTop() < 10){
+            if($(window).scrollTop() < 100){
                 
                 
             }
@@ -23,7 +23,7 @@ $(document).ready(function($) {
 
 
         $(window).on('scroll', function (){
-            if($(window).scrollTop() < 10){
+            if($(window).scrollTop() < 100){
             $('.link').each(function($key,$item){
                 $($item).removeClass('header-menu-open');
             });
@@ -34,7 +34,7 @@ $(document).ready(function($) {
 
         $(window).on('scroll', function(){
               
-              if($(document).scrollTop() > 10){
+              if($(document).scrollTop() > 100){
                 $('.header').addClass('header-fixed');
                 $('.header-btn .btn').addClass('calendar-none');
                 $('.header-menu ul').addClass('dis-none');   
@@ -89,22 +89,10 @@ $(document).ready(function($) {
     
 // HUMBURGER MENU end
 
-   // var mq1000 = window.matchMedia( "(max-width: 1000px)" );
+var heightHeader = $('.header').height();
+$('.main').css('margin-top', heightHeader);
 
-  
-   //      if (mq1000.matches && mq991min.matches) {
-   //          $('.header').addClass('header-fixed');
-   //          $('.header-btn .btn').addClass('calendar-none');
-   //          $('.header-menu ul').addClass('dis-none'); 
-   //          $('.link').click(function() {
-   //              var ths = $(this);
-   //              $(ths).toggleClass('header-menu-open');
-   //              $('.header-menu h3').not(this).removeClass('header-menu-open');
-   //          });
-   //      }
-
-
-
+$('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)' );
 
 // SELECT STYLE start
 	$('select').each(function(){
