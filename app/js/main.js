@@ -186,39 +186,7 @@ $(document).ready(function ($) {
 
     // SLIDER NEWS HOME end
 
-    // slider slider-watch-also
-
-    // $('.slider-watch-also').slick({
-    //     dots: false,
-    //     arrow: false,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     responsive: [{
-    //         breakpoint: 99999,
-    //         settings: "unslick"
-    //     },
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         arrow: true,
-    //         slidesToShow: 2,
-    //         slidesToScroll: 1,
-    //         infinite: true
-    //       }
-    //     },
-    //     {
-    //       breakpoint: 577,
-    //       settings: {
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1,
-    //         infinite: true,
-    //         slide: ".col-12"
-    //       }
-    //     }
-    //     ]
-    // })
-
-
+    // slider slider-watch-also start
     function slideDetect() {
         $('.slider-watch-also').slick({
             dots: false,
@@ -260,6 +228,13 @@ $(document).ready(function ($) {
         else if ($(window).width() <= 767) {
             slideDetect()
         }
+    });
+
+    // slider slider-watch-also end
+
+    $('#reloadMoreNews').click(function(event) {
+        event.preventDefault();
+        $('#newsContent').append('<article class="news-box"><div class="row align-items-center"><div class="col-12 col-md-5"><a href="#" class="news-box__image"><img src="img/blog/image-6.png" alt=""><div class="news-box__date"><span>27</span><span>11</span><span>18</span></div></a></div><div class="col-12 col-md-7"><div class="news-box__desc"><a href="#">Конференция освежающие  потоки - большой зал </a><p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во плоти, одинаково как Б...</p></div></div></div></article>');
     });
 
 
