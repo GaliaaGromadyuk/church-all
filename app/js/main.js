@@ -89,10 +89,18 @@ $(document).ready(function($) {
     
 // HUMBURGER MENU end
 
+
+
 var heightHeader = $('.header').height();
 $('.main').css('margin-top', heightHeader);
 
 $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)' );
+
+var heightFooter = $('.footer').height();
+// $('.main').css('height', 'calc(100% - ' + heightFooter + 'px - ' + heightHeader + 'px)' );
+// $('body').css('height', 'calc(100% - ' + heightFooter + 'px)' );
+
+
 
 // SELECT STYLE start
 	$('select').each(function(){
@@ -185,6 +193,26 @@ $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)' )
     });
     
 // SLIDER NEWS HOME end
+
+  $("#cc").inputmask({
+    mask: '9999  9999  9999  9999',
+    placeholder: 'X'
+  });
+
+  $("#month").inputmask({
+    mask: '99',
+    placeholder: 'X'
+  });
+
+  $("#year").inputmask({
+    mask: '99',
+    placeholder: 'X'
+  });
+
+  $("#cvv").inputmask({
+    mask: '999',
+    placeholder: 'X'
+  });
 
 
 });
