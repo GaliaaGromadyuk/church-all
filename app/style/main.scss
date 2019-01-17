@@ -708,6 +708,173 @@ button.is-active {
 	}
 }
 
+//first screen 
+.first-screen {
+    &__title {
+        background-image: url(../img/about_chorch/banner-line.png);
+        background-position: left bottom 2rem;
+        background-repeat: no-repeat;
+        background-size: 35.5rem;
+        height: 100%;
+        color: $wh;
+        text-transform: uppercase;
+        z-index: 2;
+        padding-top: 5.9rem;
+        position: relative;
+        >span {
+            font-size: 1.75rem;
+            font-weight: 700;
+            position: absolute;
+            top: 7.07rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+		p {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0;
+            padding-left: 6.5rem;
+		}
+		
+    }
+    &__link {
+        position: relative !important;
+        top: 0 !important;
+        margin-top: -20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        z-index: 2;
+        .social-icon__item {
+            width: 40px;
+            height: 40px;
+            margin: 0 1rem;
+            font-size: 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+//path-page
+.path-page {
+    color: $text-light;
+    font-size: 1rem;
+    font-family: $font;
+    padding: 3.125rem 0 2.625rem;
+    &__link {
+        color: $text;
+        position: relative;
+        font-weight: 500;
+        transition: all 0.2s;
+        &:hover{
+            color: $main;
+        }
+        &::after {
+            content: '/';
+            padding-left: 10px;
+            color: $text-light;
+        }
+    }
+}
+
+// section watch-also
+.watch-also {
+    &__title {
+        text-transform: uppercase;
+        color: $main;
+        font-size: 1.2rem;
+        margin-bottom: 3.6rem;
+    }
+    &__content {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        &:focus {
+            outline: none;
+        }
+        &_img {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+            >img {
+                width: 100%;
+                transition: transform .4s;
+            }
+        }
+        &:hover {
+            img {
+               transform: scale(1.06);
+            }
+        }
+        >span {
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        >p{
+            margin: 0;
+        }
+    }
+    .slider-watch-also {
+        .slick-next,
+        .slick-prev {
+            top: 50%;
+        }
+        .slick-prev {
+            left: -15px;
+        }
+        .slick-next {
+            right: -15px;
+        }
+    }
+}
+
+// pagination
+.page-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 5.5rem;
+    &__item {
+        margin: 0 4px;
+    }
+    &__link {
+        color: $main;
+        width: 1.8rem;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        margin: 0 4px;
+        transition: .3s;
+        &_prev,
+        &_next {
+            color: $text-s;
+            font-size: 1.6rem;
+            border: none;
+        }
+        &_empty {
+            border: none;
+        }
+        &.active {
+            border-color: $main;
+            color: $text-s;
+        }
+        &:hover {
+            border-color: $main;
+            color: $text-s;
+        }
+    }
+    
+}
 
 
 
