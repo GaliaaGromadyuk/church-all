@@ -186,5 +186,37 @@ $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)' )
     
 // SLIDER NEWS HOME end
 
+// slider slider-watch-also
+
+    $('.slider-watch-also').slick({
+        dots: false,
+        arrow: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 99999,
+            settings: "unslick"
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrow: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 577,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            slide: ".col-12"
+          }
+        }
+        ]
+    })
+
 
 });
