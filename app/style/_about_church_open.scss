@@ -7,10 +7,126 @@
         height: 22.5rem;
         position: relative;
         &__title {
-            span {
-                padding-left: 14.5rem;
-                display: inline-block;
-                margin-top: 1.2rem;
+            >span {
+                left: 25.1rem;
+            }
+            h1 {
+                margin-top: 4rem;
+            }
+        }
+    }
+}
+
+.about-church-open__title {
+    color: $main-s;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 0.7;
+    text-transform: uppercase;
+    display: block;
+}
+
+.list-quotes {
+    font-size: 1rem;
+    margin-bottom: 6.1rem;
+    >li {
+        border-bottom: 1px solid #e2e2e2;
+        padding: 2rem 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        >p{
+            margin-top: 0;
+            margin-bottom: 1.7rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .about-church-open {
+        .first-screen {
+            &__title {
+                >span {
+                    left: 23.1rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1199.8px) {
+    .about-church-open {
+        .first-screen {
+            &__title {
+                >span {
+                    left: 21.2rem;
+                }
+            }
+        }
+    }
+    
+    .list-quotes {
+        margin-bottom: 4rem;
+        >li {
+            padding: 1.8rem 0;
+            >p{
+                margin-top: 0;
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991.8px) {
+    html {
+        font-size: 16px !important;
+    }
+
+    .about-church-open__title {
+        font-size: 5.6rem;
+    }
+    
+}
+
+@media only screen and (max-width: 765.8px) {
+
+    .about-church-open__title {
+        font-size: 4.6rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 575.8px) {
+    .about-church-open {
+        .first-screen {
+            height: 16.5rem;
+            &__title {
+                >span {
+                    left: 11rem;
+                    top: 5.5rem;
+                }
+                h1 {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1520px) {
+    .about-church-open__title {
+        font-size: 10rem;
+    }
+}
+
+@media (min-width: 2000px) {
+	.about-church-open {
+        .first-screen {
+            &__title {
+                >span {
+                    left: 40rem;
+                }
             }
         }
     }
