@@ -16,6 +16,12 @@ svg{
 	max-height:21px;
 }
 
+.main input, .main textarea{
+	padding: 1rem;
+	border: 1px solid #cdcdcd;
+	font-size:1rem;
+}
+
 $select-width: 220px;
 $select-height: 40px; 
 
@@ -26,6 +32,14 @@ $select-height: 40px;
 }
 .m-15{
 	
+}
+.page-title{
+	font-size: 1.5rem;
+	color: $main;
+	font-weight: 700;
+	text-align: center;
+	padding: 3rem 0;
+	border-bottom: 1px solid #f5f5f5;
 }
 .fixed{
   position: fixed;
@@ -151,7 +165,6 @@ $transitionEasing: ease-in-out;
   background: transparent;
   border-top: $lineThickness solid;
   border-bottom: $lineThickness solid;
-  
   color: $buttonColor;
   font-size: 0;
       border-left: 0;
@@ -206,6 +219,8 @@ button.is-active {
 	transition: all 0.15s;
 	position: relative;
 	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
 	&:hover{
 		box-shadow: none !important;
 	}
@@ -215,6 +230,17 @@ button.is-active {
 	background: $text-s;
 	color: $wh;
 	box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.25);
+	&:hover{
+		background: $main-s;
+	}
+}
+.btn-darken-blue{
+	background: $main;
+	padding: 1rem 3rem;
+	color: $wh;
+	box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.25);
+	padding: 1rem;
+	min-width: 10rem;
 	&:hover{
 		background: $main-s;
 	}
@@ -308,8 +334,9 @@ button.is-active {
 .header{
 	background: $main;
 	-webkit-transform: translateZ(0);
+	box-shadow: 0px 9px 11.83px 1.17px rgba(0, 0, 0, 0.14);
 	color: $wh;
-	padding: 1rem 0;
+	
 	width: 100%;
 	top: 0;
 	z-index: 999;
@@ -319,6 +346,9 @@ button.is-active {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  > .container{
+  	padding: 1rem 0;
+  }
 	.mobile-menu{
 		display: none;
 	}
@@ -688,8 +718,9 @@ button.is-active {
 @import 'blog_open';
 @import 'news';
 @import 'church_services';
-
-
+@import 'write_pastor';
+@import 'thanks';
+@import 'donate';
 
 
 @import 'media';
