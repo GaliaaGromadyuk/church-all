@@ -167,6 +167,9 @@
         display: block;
         width: 100%;
         margin-bottom: 1.5rem;
+        &:focus {
+            outline: none;
+        }
         &_img {
             width: 100%;
             height: auto;
@@ -343,14 +346,16 @@
     .watch-also {
         &__content {
             margin-bottom: 5.5rem;
-            &:focus {
-                outline: none;
-            }
         }
         &__title {
             text-align: center;
         }
         .slider-watch-also {
+            .slick-track {
+                &:focus {
+                    outline: none;
+                }
+            }
             .slick-next,
             .slick-prev {
                 top: auto;
