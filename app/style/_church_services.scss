@@ -1,0 +1,87 @@
+.church_services {
+    .first-screen {
+        background-image: url(../img/church_services/banner.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 22.5rem;
+        position: relative;
+        &__title {
+            >span {
+                left: 20.5rem;
+            }
+            h1 {
+                margin-top: 4rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .church_services {
+        .first-screen {
+            &__title {
+                >span {
+                    left: 19rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1199.8px) {
+    .church_services {
+        .first-screen {
+            &__title {
+                >span {
+                    left: 17.8rem;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+@media only screen and (max-width: 991.8px) {
+   
+    
+}
+
+@media only screen and (max-width: 767.8px) {
+    
+}
+
+@media only screen and (max-width: 575.8px) {
+    .church_services {
+        .first-screen {
+            height: 16.5rem;
+            &__title {
+                >span {
+                    left: 7rem;
+                    top: 5.5rem;
+                }
+                h1 {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width: 2000px) {
+	.church_services {
+        .first-screen {
+            &__title {
+                >span {
+                    left: 34rem;
+                }
+            }
+        }
+    }
+}

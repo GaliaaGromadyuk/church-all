@@ -28,6 +28,27 @@
 	}
 }
 
+@media only screen and (max-width: 1440px) {
+    .first-screen {
+		&__title {
+			background-position: left -2rem bottom 2rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px){
+	html {
+		font-size: 18px;
+	}
+	.first-screen__title {
+		background-position: left -3rem bottom 2rem;
+	}
+
+	.path-page {
+		padding: 2.8rem 0 2rem;
+	}
+}
+
 @media (max-width : 1200px){
 	html{
 		font-size: 18px;
@@ -412,5 +433,83 @@
 			padding-top: 2.375rem;
 			border-top: 1px solid  #e4e4e4;
 		}
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+    .first-screen {
+        &__title {
+            background-size: 340px;
+            background-position: left -3rem bottom 2.5rem;
+            padding-top: 4.9rem;
+            >span {
+                font-size: 1.4rem;
+                top: 7.07rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.4rem;
+                padding-left: 10vw;
+            } 
+        }
+    }
+
+    .watch-also {
+        &__content {
+            margin-bottom: 5.5rem;
+        }
+        &__title {
+            text-align: center;
+        }
+        .slider-watch-also {
+            .slick-track {
+                &:focus {
+                    outline: none;
+                }
+            }
+            .slick-next,
+            .slick-prev {
+                top: auto;
+                bottom: 0;
+                height: 46px;
+                width: calc(50% - 15px);
+                border: none;
+                background-color: $text-s;
+                z-index: 2;
+                &:focus {
+                    outline: none;
+                    background-color: $main;
+                }
+                &::before {
+                    color: $wh;
+                    line-height: 0.6;
+                    font-size: 40px;
+                }
+            }
+            .slick-prev {
+                left: 15px;
+            }
+            .slick-next {
+                right: 15px;
+            }
+        }
+	}
+	
+	.page-pagination {
+        &__item {
+            margin: 0 2px;
+        }
+        &__link {
+            margin: 0;
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+	.first-screen__title {
+		background-position: left 21% bottom 2rem;
 	}
 }

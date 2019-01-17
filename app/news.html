@@ -6,7 +6,7 @@
     <title>Start</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/icon/favicon.png"/>
+    <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="libs/slick-theme.css" />
@@ -16,8 +16,8 @@
 </head>
 
 <body>
-<!-- HEADER start -->
-        <header class="header">
+    <!-- HEADER start -->
+    <header class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-6 header-col logo-col">
@@ -49,7 +49,7 @@
                                     <ul class="list-style-none submenu">
                                         <li><a href="video.html">Видео-проповеди</a></li>
                                         <li><a href="blog.html">Блог церкви</a></li>
-                                        <li><a href="news.html">Новости церкви</a></li>
+                                        <li><a href="advertisement.html">Новости церкви</a></li>
                                         <li><a href="site_updates.html">Обновления сайта</a></li>
                                     </ul>
                                 </nav>
@@ -106,7 +106,7 @@
                             <span>Войти в личный кабинет</span>
                         </a>
                         <div class="header-search scroll-none">
-                            <input type="text" class="searchTerm" placeholder="Поиск по сайту">
+                            <input type="text" class="searchTerm" placeholder="Введите текст для поиска">
                             <button type="submit" class="searchButton">
                                 <i class="fa fa-search"></i>
                             </button>
@@ -146,18 +146,19 @@
                 </div>
             </div>
         </header>
-<!-- HEADER end -->
+    <!-- HEADER end -->
 
-    <main class="main about-church">
+
+    <main class="main news">
 
         <!-- FIRST SCREEN start -->
         <section class="first-screen">
             <div class="first-screen__title">
+                <span>новости</span>
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                                <h1>Люби Бога,</h1>
-                                <p>люби людей,<br>люби церковь</p>
+                            <h1>нашей церкви</h1>
                         </div>
                     </div>
                 </div>
@@ -192,7 +193,7 @@
                     <div class="col">
                         <div class="path-page">
                             <a href="index.html" class="path-page__link">Главная</a>
-                            <span class="path-page__item">О Церкви</span>
+                            <span class="path-page__item">Новости</span>
                         </div>
                     </div>
                 </div>
@@ -200,96 +201,169 @@
         </section>
         <!-- PATH-PAGE end -->
 
-        <!-- about-church-desc start -->
-        <section class="about-church-desc">
+        <!-- content news page start -->
+        <section>
             <div class="container">
-                <!-- image left -->
-                <article class="about-church-desc__left">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-sm-6 col-md-5">
-                            <a href="#" class="about-church__img">
-                                <img src="img/about_chorch/image-1.png" alt="">
-                                <span class="about-church__read-more about-church__img_right">Читать дальше</span>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 offset-md-1">
-                            <div class="about-church__text">
-                                <h3>Наша Миссия</h3>
-                                <p>Преобразование общества через восстановление личности в Боге</p>
-                            </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="news__select">
+                            <span>Показать статьи:</span>
+                            <select name="" id="">
+                                <option value="all">Все</option>
+                                <option value="">Все</option>
+                            </select>
                         </div>
                     </div>
-                </article>
-                <!-- image right -->
-                <article class="about-church-desc__right">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 offset-lg-1 order-2 order-sm-1">
-                            <div class="about-church__text">
-                                <h3>Наше Видение</h3>
-                                <p>«…Ходя же, проповедуйте, что приблизилось Царство
-                                    Небесное; больных исцеляйте, прокаженных очищайте,
-                                    мёртвых воскрешайте, бесов изгоняйте; даром получили,
-                                    даром давайте…» </p>
-                                <p>Мтф. 10:7-8.</p>
+                    <div class="col-12 col-xl-10" id="newsContent">
+                        <article class="news-box">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <a href="#" class="news-box__image">
+                                        <img src="img/blog/image-1.png" alt="">
+                                        <div class="news-box__date">
+                                            <span>27</span>
+                                            <span>11</span>
+                                            <span>18</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="news-box__desc">
+                                        <a href="#">Название статьи. Открылась новая церковь  в 
+                                            г. Черноморск</a>
+                                        <p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на 
+                                            богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во 
+                                            плоти, одинаково как Б...
+                                            </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-5 offset-md-1 order-1">
-                            <a href="#" class="about-church__img">
-                                <img src="img/about_chorch/image-2.png" alt="">
-                                <span class="about-church__read-more about-church__img_left">Читать дальше</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                <!-- image left -->
-                <article class="about-church-desc__left">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-sm-6 col-md-5">
-                            <a href="about_church_open.html" class="about-church__img">
-                                <img src="img/about_chorch/image-3.png" alt="">
-                                <span class="about-church__read-more about-church__img_right">Читать дальше</span>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 offset-md-1">
-                            <div class="about-church__text">
-                                <h3>Наше Исповедание Веры</h3>
-                                <p>Верим, что Господь Иисус Христос, Сын Божий пришел во
-                                    плоти, одинаково как Бог, так и Человек. Бог Он, как
-                                    рожденный от Отца, прежде начала времен и Человек, как
-                                    рожденный от девы Марии в свое время. Он умер на
-                                    кресте за наши грехи, сошел в царство смерти, воскрес из
-                                    мертвых, вознесся на небо, воссел одесную Отца и вернется
-                                    судить живых и мертвых.
-                                    <span>(Лк 1:27,31,35, Гал 4:4, Фил 2:8, Деян 13:37, Рим 6:9,
-                                        1Кор 15:3-5, Мк 16:19, Рим 14:9-10) ...</span></p>
+                        </article>
+                        <article class="news-box">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <a href="#" class="news-box__image">
+                                        <img src="img/blog/image-2.png" alt="">
+                                        <div class="news-box__date">
+                                            <span>27</span>
+                                            <span>11</span>
+                                            <span>18</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="news-box__desc">
+                                        <a href="#">Начался новый набор 2019 в  Библейскую школу.</a>
+                                        <p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на 
+                                            богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во 
+                                            плоти, одинаково как Б...
+                                            </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </article>
-                <!-- image right -->
-                <article class="about-church-desc__right">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 offset-lg-1 order-2 order-sm-1">
-                            <div class="about-church__text">
-                                <h3>Пастор церкви</h3>
-                                <span>ФИО пастора</span>
-                                <p>Небольшая история пастора... Мы верим, что истинная
-                                    Церковь состоит из разных людей и разных народов – из
-                                    тех, кто чрез веру в Иисуса Христа возрождены Святым
-                                    Духом и соединены в Теле Христовом. </p>
+                        </article>
+                        <article class="news-box">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <a href="#" class="news-box__image">
+                                        <img src="img/blog/image-3.png" alt="">
+                                        <div class="news-box__date">
+                                            <span>27</span>
+                                            <span>11</span>
+                                            <span>18</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="news-box__desc">
+                                        <a href="#">С января 2018 будет  проходить также и дневное  
+                                            служение</a>
+                                        <p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на 
+                                            богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во 
+                                            плоти, одинаково как Б...
+                                            </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-5 offset-md-1 order-1">
-                            <a href="#" class="about-church__img">
-                                <img src="img/about_chorch/image-4.png" alt="">
-                                <span class="about-church__read-more about-church__img_left">Читать дальше</span>
-                            </a>
-                        </div>
+                        </article>
+                        <article class="news-box">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <a href="#" class="news-box__image">
+                                        <img src="img/blog/image-4.png" alt="">
+                                        <div class="news-box__date">
+                                            <span>27</span>
+                                            <span>11</span>
+                                            <span>18</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="news-box__desc">
+                                        <a href="#">Название статьи</a>
+                                        <p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на 
+                                            богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во 
+                                            плоти, одинаково как Б...
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-box">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <a href="#" class="news-box__image">
+                                        <img src="img/blog/image-5.png" alt="">
+                                        <div class="news-box__date">
+                                            <span>27</span>
+                                            <span>11</span>
+                                            <span>18</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="news-box__desc">
+                                        <a href="#">Название для какой-то статьи с длинным 
+                                            загаловком</a>
+                                        <p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на 
+                                            богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во 
+                                            плоти, одинаково как Б...
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-box">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <a href="#" class="news-box__image">
+                                        <img src="img/blog/image-6.png" alt="">
+                                        <div class="news-box__date">
+                                            <span>27</span>
+                                            <span>11</span>
+                                            <span>18</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="news-box__desc">
+                                        <a href="#">Конференция освежающие  потоки - большой зал </a>
+                                        <p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на 
+                                            богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во 
+                                            плоти, одинаково как Б...
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
+                    <div class="col-12">
+                        <div id="reloadMoreNews" class="reload-more"><span><img src="img/icon/reload.svg" alt="reload"></span>Загрузить больше</div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- about-church-desc end -->
+        <!-- content news page end -->
 
         <!-- watch-also start -->
         <article class="watch-also">
