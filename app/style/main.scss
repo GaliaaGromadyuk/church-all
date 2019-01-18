@@ -347,7 +347,7 @@ button.is-active {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   > .container{
-  	padding: 1rem 0;
+  	padding: 1rem 1rem;
   }
 	.mobile-menu{
 		display: none;
@@ -888,6 +888,7 @@ button.is-active {
 @import 'write_pastor';
 @import 'thanks';
 @import 'donate';
+@import 'music';
 
 
 @import 'media';

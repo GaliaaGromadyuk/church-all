@@ -86,16 +86,15 @@ $(document).ready(function ($) {
         }
     });
 
-
-    var heightHeader = $('.header').height();
-    $('.main').css('margin-top', heightHeader);
-
-
     // HUMBURGER MENU end
+
+
+// STYLE FOR MAIN start
     var heightHeader = $('.header').height();
     $('.main').css('margin-top', heightHeader);
-
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
+    var heightFooter = $('.footer').height();
+// STYLE FOR MAIN end
 
     // SELECT STYLE start
     $('select').each(function () {
@@ -262,6 +261,23 @@ $(document).ready(function ($) {
     mask: '999',
     placeholder: 'X'
   });
+
+$('#bank').on('click', function (e) {
+    $('.donate__credit_card').slideToggle();
+    if ($('.donate__bank_account').is(":visible")) {
+        $('.donate__bank_account').slideUp();
+    }
+});
+$('#bil').on('click', function () {
+    $('.donate__bank_account').slideToggle();
+        if ($('.donate__credit_card').is(":visible")) {
+        $('.donate__credit_card').slideUp();
+    }
+});
+
+$('#privat, #liqpay').on('click', function () {
+    $('.payment-form').slideUp();
+});
 
 
 });
