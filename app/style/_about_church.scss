@@ -6,6 +6,11 @@
         background-size: cover;
         height: 22.5rem;
         position: relative;
+        &__title {
+            h1 {
+                margin-top: 0;
+            }
+        }
     }
 }
 
