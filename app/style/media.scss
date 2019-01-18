@@ -32,6 +32,9 @@
     .first-screen {
 		&__title {
 			background-position: left -2rem bottom 2rem;
+			>span {
+				left: 14rem;
+			}
 		}
 	}
 }
@@ -42,6 +45,9 @@
 	}
 	.first-screen__title {
 		background-position: left -3rem bottom 2rem;
+		>span {
+			left: 13rem;
+		}
 	}
 
 	.path-page {
@@ -444,10 +450,12 @@
             padding-top: 4.9rem;
             >span {
                 font-size: 1.4rem;
-                top: 7.07rem;
+				left: 0;
+				top: 5.5rem;
             }
             h1 {
-                font-size: 2rem;
+				font-size: 2rem;
+				margin-top: 3rem;
             }
             p {
                 font-size: 1.4rem;
@@ -511,5 +519,8 @@
 @media only screen and (min-width: 2000px) {
 	.first-screen__title {
 		background-position: left 21% bottom 2rem;
+        >span {
+			left: 27%;
+        }
 	}
 }

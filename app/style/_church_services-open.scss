@@ -1,0 +1,20 @@
+.church_services-open {
+    .first-screen {
+        background-image: url(../img/church_services-open/banner.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 22.5rem;
+        position: relative;
+    }
+}
+
+
+
+@media only screen and (max-width: 575.8px) {
+    .church_services-open {
+        .first-screen {
+            height: 16.5rem;
+        }
+    }
+}
