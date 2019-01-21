@@ -795,6 +795,7 @@ button.is-active {
   }
   .social-icon__items{
   		justify-content: center;
+  		position: initial;
   }
   .social-icon__item{
 	    background-color: white;
@@ -990,6 +991,7 @@ button.is-active {
 @import 'donate';
 @import 'music';
 @import 'contacts';
+@import 'search';
 
 
 @import 'media';

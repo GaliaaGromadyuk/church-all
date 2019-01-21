@@ -295,24 +295,6 @@ $('.modal_close, #overlay').click( function(){
         }
         ]
     });
-
-    $('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-			titleSrc: function(item) {
-				return item.el.attr('title');
-			}
-		}
-    });
     
     $('.slider-video').slick({
         dots: false,
@@ -338,6 +320,24 @@ $('.modal_close, #overlay').click( function(){
         ]
     });
 
+    $('#bank').on('click', function (e) {
+    $('.donate__credit_card').slideToggle();
+    if ($('.donate__bank_account').is(":visible")) {
+        $('.donate__bank_account').slideUp();
+    }
+});
+$('#bil').on('click', function () {
+    $('.donate__bank_account').slideToggle();
+        if ($('.donate__credit_card').is(":visible")) {
+        $('.donate__credit_card').slideUp();
+    }
+});
+
+$('#privat, #liqpay').on('click', function () {
+    $('.payment-form').slideUp();
+});
+
+
     $("#cc").inputmask({
         mask: '9999  9999  9999  9999',
         placeholder: 'X'
@@ -357,23 +357,23 @@ $('.modal_close, #overlay').click( function(){
         mask: '999',
         placeholder: 'X'
     });
-
-$('#bank').on('click', function (e) {
-    $('.donate__credit_card').slideToggle();
-    if ($('.donate__bank_account').is(":visible")) {
-        $('.donate__bank_account').slideUp();
-    }
-});
-$('#bil').on('click', function () {
-    $('.donate__bank_account').slideToggle();
-        if ($('.donate__credit_card').is(":visible")) {
-        $('.donate__credit_card').slideUp();
-    }
-});
-
-$('#privat, #liqpay').on('click', function () {
-    $('.payment-form').slideUp();
-});
-
+    
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
 
 });
