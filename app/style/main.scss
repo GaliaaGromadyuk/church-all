@@ -708,6 +708,88 @@ button.is-active {
 	}
 }
 
+
+// POPUP
+
+.modal_close {
+  font-size: 1.2;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid $main;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          transition: all 0.2s;
+            	&:hover svg{
+  		fill: $main;
+ 	}
+  svg{
+  	fill: #c4c4c4;
+  	transition: all 0.3s;
+  	&:hover{
+  		fill: $main;
+  	}
+  }
+}       
+
+
+#overlay {
+  z-index: 998;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
+
+.popup-thanks{
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none;
+  padding: 5rem 10rem;
+  background: $wh;
+  opacity: 0;  
+  z-index: 999;
+  text-align: center;
+  h1{
+  	    font-size: 4.5rem;
+	    text-transform: uppercase;
+	    color: $main;
+  }
+  h3{
+  	    font-size: 1.1rem;
+    	text-transform: uppercase;
+    	margin-bottom: 2rem;
+  }
+  p{
+  	font-size: 0.8rem;
+  }
+  .social-icon__items{
+  		justify-content: center;
+  }
+  .social-icon__item{
+	    background-color: white;
+  }
+}
+
 //first screen 
 .first-screen {
     &__title {

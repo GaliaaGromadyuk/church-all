@@ -48,6 +48,27 @@ $(document).ready(function ($) {
     }
     // FIXED MENU end
 
+// POPUP THANKS start
+$('.donate-btn').click( function(event){
+  event.preventDefault();
+  $('#overlay').fadeIn(400,
+    function(){ 
+      $('.popup-thanks') 
+        .css('display', 'block') 
+        .animate({opacity: 1, top: '50%'}, 200); 
+  });
+});
+$('.modal_close, #overlay').click( function(){
+  $('.popup-thanks').animate({opacity: 0, top: '45%'}, 200, 
+      function(){ 
+        $(this).css('display', 'none'); 
+        $('#overlay').fadeOut(400);
+      }
+    );
+});
+
+// POPUP THANKS end
+
     // HUMBURGER MENU start
     $('.menu-toggle').on('click', function () {
         $(this).toggleClass('is-active');

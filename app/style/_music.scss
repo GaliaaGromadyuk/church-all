@@ -21,3 +21,12 @@
 		width: 100%;
 	}
 }
+
+@media (max-width: 991.8px) {
+	.music{
+		&-list{
+			padding: 2rem 2rem;
+		}
+	}
+    
+}
