@@ -38,6 +38,7 @@ $select-height: 40px;
 	color: $main;
 	font-weight: 700;
 	text-align: center;
+	text-transform: uppercase;
 	padding: 3rem 0;
 	border-bottom: 1px solid #f5f5f5;
 }
@@ -737,7 +738,7 @@ button.is-active {
  	}
   svg{
   	fill: #c4c4c4;
-  	transition: all 0.3s;
+  	transition: all 0.2s;
   	&:hover{
   		fill: $main;
   	}
@@ -971,6 +972,7 @@ button.is-active {
 @import 'thanks';
 @import 'donate';
 @import 'music';
+@import 'contacts';
 
 
 @import 'media';
