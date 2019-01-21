@@ -228,7 +228,7 @@ $(document).ready(function ($) {
                 }
             }
             ]
-        })
+        });
     }
 
     slideDetect();
@@ -243,25 +243,100 @@ $(document).ready(function ($) {
     });
     // slider slider-watch-also end
 
-  $("#cc").inputmask({
-    mask: '9999  9999  9999  9999',
-    placeholder: 'X'
-  });
 
-  $("#month").inputmask({
-    mask: '99',
-    placeholder: 'X'
-  });
+    $('.slider-photo').slick({
+        dots: false,
+        arrow: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: false,
+        slide: ".col-12",
+        responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 577,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
 
-  $("#year").inputmask({
-    mask: '99',
-    placeholder: 'X'
-  });
+    $('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		}
+    });
+    
+    $('.slider-video').slick({
+        dots: false,
+        arrow: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        slide: ".col-12",
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 577,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
 
-  $("#cvv").inputmask({
-    mask: '999',
-    placeholder: 'X'
-  });
+    $("#cc").inputmask({
+        mask: '9999  9999  9999  9999',
+        placeholder: 'X'
+    });
+
+    $("#month").inputmask({
+        mask: '99',
+        placeholder: 'X'
+    });
+
+    $("#year").inputmask({
+        mask: '99',
+        placeholder: 'X'
+    });
+
+    $("#cvv").inputmask({
+        mask: '999',
+        placeholder: 'X'
+    });
 
 
 });
