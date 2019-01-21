@@ -48,6 +48,27 @@ $(document).ready(function ($) {
     }
     // FIXED MENU end
 
+// POPUP THANKS start
+$('.donate-btn').click( function(event){
+  event.preventDefault();
+  $('#overlay').fadeIn(400,
+    function(){ 
+      $('.popup-thanks') 
+        .css('display', 'block') 
+        .animate({opacity: 1, top: '50%'}, 200); 
+  });
+});
+$('.modal_close, #overlay').click( function(){
+  $('.popup-thanks').animate({opacity: 0, top: '45%'}, 200, 
+      function(){ 
+        $(this).css('display', 'none'); 
+        $('#overlay').fadeOut(400);
+      }
+    );
+});
+
+// POPUP THANKS end
+
     // HUMBURGER MENU start
     $('.menu-toggle').on('click', function () {
         $(this).toggleClass('is-active');
@@ -86,16 +107,15 @@ $(document).ready(function ($) {
         }
     });
 
-
-    var heightHeader = $('.header').height();
-    $('.main').css('margin-top', heightHeader);
-
-
     // HUMBURGER MENU end
+
+
+// STYLE FOR MAIN start
     var heightHeader = $('.header').height();
     $('.main').css('margin-top', heightHeader);
-
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
+    var heightFooter = $('.footer').height();
+// STYLE FOR MAIN end
 
     // SELECT STYLE start
     $('select').each(function () {
@@ -337,6 +357,23 @@ $(document).ready(function ($) {
         mask: '999',
         placeholder: 'X'
     });
+
+$('#bank').on('click', function (e) {
+    $('.donate__credit_card').slideToggle();
+    if ($('.donate__bank_account').is(":visible")) {
+        $('.donate__bank_account').slideUp();
+    }
+});
+$('#bil').on('click', function () {
+    $('.donate__bank_account').slideToggle();
+        if ($('.donate__credit_card').is(":visible")) {
+        $('.donate__credit_card').slideUp();
+    }
+});
+
+$('#privat, #liqpay').on('click', function () {
+    $('.payment-form').slideUp();
+});
 
 
 });
