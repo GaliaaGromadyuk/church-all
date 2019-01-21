@@ -1,0 +1,65 @@
+.resources {
+    .first-screen {
+        background-image: url(../img/resource/banner.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 22.5rem;
+        position: relative;
+        &__title {
+            >span {
+                left: 7rem;
+                width: 23.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .resources {
+        .first-screen__title {
+            >span {
+                left: 5rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1199.8px){
+    .resources {
+        .first-screen__title {
+            >span {
+                left: 4rem;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 575.8px) {
+    .resources {
+        .first-screen {
+            height: 16.5rem;
+            &__title {
+                >span {
+                    width: auto;
+                    left: 15px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 2000px) {
+	.resources {
+        .first-screen__title {
+            >span {
+                left: 21%;
+            }
+        }
+    }
+}
