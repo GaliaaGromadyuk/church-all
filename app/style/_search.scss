@@ -46,6 +46,7 @@
 		.searchButton{
 			position: 	absolute;
 			right: 0;
+			top: 0;
 			cursor: pointer;
 		    height: 100%;
 		    width: 11rem;
@@ -59,6 +60,7 @@
 			     -o-transition: all 0.2s ease-in;
 			        transition: all 0.2s ease-in;
 			color: $wh;
+			font-weight: 700;
 		    &:hover{
 		    	background: $main-s;
 		    }

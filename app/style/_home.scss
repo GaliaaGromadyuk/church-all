@@ -81,8 +81,9 @@
 			padding-right: 5rem;
 		}
 		&__icon{
+			width: 50px;
+			height: 50px;
 			min-width: 50px;
-			min-height: 50px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -219,7 +220,7 @@
     }
 	&:after{
 		content: ''; 
-		left: -60px;
+		left: -59.1px;
 	    position: absolute; 
 		border: 30px solid transparent;	
 		border-top: 30px solid $main; 
@@ -227,7 +228,7 @@
 	}
 	&:before{
 		content: ''; 
-		right: -60px;
+		right: -59.1px;
 	    position: absolute; 
 		border: 30px solid transparent;	
 		border-left: 30px solid $main; 

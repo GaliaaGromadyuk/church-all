@@ -573,3 +573,33 @@
         }
 	}
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .header-logo {
+        width: auto;
+   }
+   .main{
+		display: run-in;
+		overflow: hidden;
+   }
+   .social-icon__items{
+	   	width: 100%;
+	   	left: 0;
+	   	justify-content: center;
+   }
+   .home .news-block{
+   		height: 18rem;
+   }
+   .header-menu-open + ul{
+		transform: translateY(89%);
+		top: auto;
+   }
+   .contacts{
+   	.social-icon__items{
+   		justify-content: flex-start;
+   	}
+   }
+   .footer .social-icon__items{
+   		justify-content: flex-start;
+   	}
+}

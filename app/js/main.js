@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     // FIXED MENU start
     var mq1000min = window.matchMedia("(min-width: 1000px)");
     var mq991min = window.matchMedia("(min-width: 991px)");
+    var mq576 = window.matchMedia("(max-width: 575.8px)");
     if (mq991min.matches) {
         $('.link').click(function () {
             if ($(window).scrollTop() < 100) {
@@ -112,9 +113,10 @@ $('.modal_close, #overlay').click( function(){
 
 // STYLE FOR MAIN start
     var heightHeader = $('.header').height();
-    $('.main').css('margin-top', heightHeader);
+    $('.main').css('padding-top', heightHeader);
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
     var heightFooter = $('.footer').height();
+
 // STYLE FOR MAIN end
 
     // SELECT STYLE start
@@ -325,17 +327,37 @@ $('.modal_close, #overlay').click( function(){
     if ($('.donate__bank_account').is(":visible")) {
         $('.donate__bank_account').slideUp();
     }
-});
-$('#bil').on('click', function () {
-    $('.donate__bank_account').slideToggle();
-        if ($('.donate__credit_card').is(":visible")) {
-        $('.donate__credit_card').slideUp();
-    }
-});
+    });
+    $('#bil').on('click', function () {
+        $('.donate__bank_account').slideToggle();
+            if ($('.donate__credit_card').is(":visible")) {
+            $('.donate__credit_card').slideUp();
+        }
+    });
 
-$('#privat, #liqpay').on('click', function () {
-    $('.payment-form').slideUp();
-});
+    $('#privat, #liqpay').on('click', function () {
+        $('.payment-form').slideUp();
+    });
+
+
+// CALENDAR start
+    
+    $('.calendar-event:nth-child(2n)').children(".calendar-event__information").addClass('order-2');
+    $('.calendar-event:nth-child(2n)').children(".calendar-event__date").addClass('order-1');
+
+    $('.calendar-event:odd').addClass('calendar-event__right');
+    $('.calendar-event:even').addClass('calendar-event__left');
+
+
+    if (mq576.matches) {
+        $('.calendar-event:odd').removeClass('calendar-event__right');
+        $('.calendar-event:even').removeClass('calendar-event__left');
+
+        $('.calendar-event:even').children(".calendar-event__information").addClass('order-2');
+        $('.calendar-event:even').children(".calendar-event__date").addClass('order-1');
+    }
+
+// CALENDAR end
 
 
     $("#cc").inputmask({
