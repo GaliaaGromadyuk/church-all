@@ -365,6 +365,28 @@ $('.modal_close, #overlay').click( function(){
         ]
     });
 
+
+    // POPUP start
+$('.video-container').click( function(event){
+    event.preventDefault();
+    $('#overlay').fadeIn(400,
+      function(){ 
+        $('.popup-video-open') 
+          .css('display', 'block') 
+          .animate({opacity: 1, top: '50%'}, 200); 
+    });
+  });
+  $('.modal_close, #overlay').click( function(){
+    $('.popup-video-open').animate({opacity: 0, top: '45%'}, 200, 
+        function(){ 
+          $(this).css('display', 'none'); 
+          $('#overlay').fadeOut(400);
+        }
+      );
+  });
+  
+  // POPUP end
+
     $("#cc").inputmask({
         mask: '9999  9999  9999  9999',
         placeholder: 'X'
@@ -401,6 +423,7 @@ $('#bil').on('click', function () {
 $('#privat, #liqpay').on('click', function () {
     $('.payment-form').slideUp();
 });
+
 
 
 });
