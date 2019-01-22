@@ -264,6 +264,7 @@ $('.modal_close, #overlay').click( function(){
     // slider slider-watch-also end
 
 
+    // slider page church_services-open start
     $('.slider-photo').slick({
         dots: false,
         arrow: true,
@@ -330,6 +331,32 @@ $('.modal_close, #overlay').click( function(){
         },
         {
             breakpoint: 577,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+    // slider page church_services-open end
+
+    // slider page sesources
+    $('.resources-slider').slick({
+        dots: false,
+        arrow: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        slide: ".col-12",
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 500,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
