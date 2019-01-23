@@ -65,3 +65,7 @@ h5{
 h6{
 	font-size: 0.6em;
 }
+
+button:focus {
+	outline: none;
+}
