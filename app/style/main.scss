@@ -3,6 +3,49 @@
 @import 'reset';
 @import 'default';
 
+
+
+.youtube {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    cursor: pointer;
+}
+ 
+.youtube .play {
+     background: url(../img/icon/play.svg),
+     linear-gradient(
+	    rgba(0,0,0, 0.50),
+	    rgba(0,0,0, 0.50)
+	  );
+    background-position: center;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid $wh;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    transition: all 0.2s;
+    &:hover{
+    	transform: scale(1.02);
+    }
+}
+ 
+.youtube:hover .play {
+    // background-position: 0 0;
+}
+
+
 .slick-next:before, .slick-prev:before{
 	color: $text-s;
 }
