@@ -51,26 +51,26 @@ $(document).ready(function ($) {
     }
     // FIXED MENU end
 
-// POPUP THANKS start
-$('.donate-btn').click( function(event){
-  event.preventDefault();
-  $('#overlay').fadeIn(400,
-    function(){ 
-      $('.popup-thanks') 
-        .css('display', 'block') 
-        .animate({opacity: 1, top: '50%'}, 200); 
-  });
-});
-$('.modal_close, #overlay').click( function(){
-  $('.popup-thanks').animate({opacity: 0, top: '45%'}, 200, 
-      function(){ 
-        $(this).css('display', 'none'); 
-        $('#overlay').fadeOut(400);
-      }
-    );
-});
+    // POPUP THANKS start
+    $('.donate-btn').click(function (event) {
+        event.preventDefault();
+        $('#overlay').fadeIn(400,
+            function () {
+                $('.popup-thanks')
+                    .css('display', 'block')
+                    .animate({ opacity: 1, top: '50%' }, 200);
+            });
+    });
+    $('.modal_close, #overlay').click(function () {
+        $('.popup-thanks').animate({ opacity: 0, top: '45%' }, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#overlay').fadeOut(400);
+            }
+        );
+    });
 
-// POPUP THANKS end
+    // POPUP THANKS end
 
     // HUMBURGER MENU start
     $('.menu-toggle').on('click', function () {
@@ -113,7 +113,7 @@ $('.modal_close, #overlay').click( function(){
     // HUMBURGER MENU end
 
 
-// STYLE FOR MAIN start
+    // STYLE FOR MAIN start
     var heightHeader = $('.header').height();
     $('.main').css('margin-top', heightHeader);
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
@@ -128,6 +128,7 @@ $('.modal_close, #overlay').click( function(){
      }
 
 // STYLE FOR MAIN end
+
 
     // SELECT STYLE start
     $('select').each(function () {
@@ -224,12 +225,12 @@ $('.modal_close, #overlay').click( function(){
 
 
 
-    $('#reloadMoreNews').click(function(event) {
+    $('#reloadMoreNews').click(function (event) {
         event.preventDefault();
         $('#newsContent').append('<article class="news-box"><div class="row align-items-center"><div class="col-12 col-md-5"><a href="#" class="news-box__image"><img src="img/blog/image-6.png" alt=""><div class="news-box__date"><span>27</span><span>11</span><span>18</span></div></a></div><div class="col-12 col-md-7"><div class="news-box__desc"><a href="#">Конференция освежающие  потоки - большой зал </a><p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во плоти, одинаково как Б...</p></div></div></div></article>');
     });
 
-    
+
     // slider slider-watch-also start
     function slideDetect() {
         $('.slider-watch-also').slick({
@@ -276,6 +277,7 @@ $('.modal_close, #overlay').click( function(){
     // slider slider-watch-also end
 
 
+    // slider page church_services-open start
     $('.slider-photo').slick({
         dots: false,
         arrow: true,
@@ -284,30 +286,30 @@ $('.modal_close, #overlay').click( function(){
         infinite: false,
         slide: ".col-12",
         responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 577,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
         ]
     });
-    
+
     $('.slider-video').slick({
         dots: false,
         arrow: true,
@@ -331,23 +333,61 @@ $('.modal_close, #overlay').click( function(){
         }
         ]
     });
+    // slider page church_services-open end
 
-    $('#bank').on('click', function (e) {
-    $('.donate__credit_card').slideToggle();
-    if ($('.donate__bank_account').is(":visible")) {
-        $('.donate__bank_account').slideUp();
-    }
-    });
-    $('#bil').on('click', function () {
-        $('.donate__bank_account').slideToggle();
-            if ($('.donate__credit_card').is(":visible")) {
-            $('.donate__credit_card').slideUp();
+    // slider page resources
+    $('.resources-slider').slick({
+        dots: false,
+        arrow: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        slide: ".col-12",
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
         }
+        ]
     });
 
-    $('#privat, #liqpay').on('click', function () {
-        $('.payment-form').slideUp();
+    // POPUP video-open start
+
+    var videoSrc;  
+    $('.video-container__video').click(function() {
+        videoSrc = $(this).data( "src" );
     });
+
+    $('.video-container__video').click(function (event) {
+        event.preventDefault();
+        $('#overlay').fadeIn(400,
+            function () {
+                $('.popup-video-open')
+                    .css('display', 'block')
+                    .animate({ opacity: 1, top: '50%' }, 200);
+            });
+        $("#video").attr('src',videoSrc + "?autoplay=1" ); 
+    });
+    $('.modal_close, #overlay, .close').click(function () {
+        $('.popup-video-open').animate({ opacity: 0, top: '45%' }, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#overlay').fadeOut(400);
+            }
+        );
+        $("#video").attr('src',videoSrc); 
+    });
+    // POPUP video-open end
+     
 
 
 // CALENDAR start
@@ -389,6 +429,25 @@ $('.modal_close, #overlay').click( function(){
         mask: '999',
         placeholder: 'X'
     });
+
+
+    $('#bank').on('click', function (e) {
+        $('.donate__credit_card').slideToggle();
+        if ($('.donate__bank_account').is(":visible")) {
+            $('.donate__bank_account').slideUp();
+        }
+    });
+    $('#bil').on('click', function () {
+        $('.donate__bank_account').slideToggle();
+        if ($('.donate__credit_card').is(":visible")) {
+            $('.donate__credit_card').slideUp();
+        }
+    });
+
+    $('#privat, #liqpay').on('click', function () {
+        $('.payment-form').slideUp();
+    });
+
     
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
@@ -407,5 +466,6 @@ $('.modal_close, #overlay').click( function(){
             }
         }
     });
+
 
 });

@@ -852,6 +852,7 @@ button.is-active {
 			display: block;
 			width: 14.5rem;
 			text-align: right;
+			z-index: 1;
         }
         h1 {
 			font-size: 3rem;
@@ -1017,8 +1018,10 @@ button.is-active {
 @import 'write_pastor';
 @import 'thanks';
 @import 'donate';
+@import 'resources';
 @import 'music';
 @import 'contacts';
+@import 'video';
 @import 'search';
 @import 'calendar';
 

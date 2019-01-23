@@ -94,8 +94,16 @@
             font-size: 1.2rem;
         }
     }
-    img {
+
+}
+
+.slider-photo {
+    &__items {
         width: 100%;
+        display: block;
+        >img {
+            width: 100%;
+        }
     }
 }
 
