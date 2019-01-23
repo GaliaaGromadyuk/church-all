@@ -48,26 +48,26 @@ $(document).ready(function ($) {
     }
     // FIXED MENU end
 
-// POPUP THANKS start
-$('.donate-btn').click( function(event){
-  event.preventDefault();
-  $('#overlay').fadeIn(400,
-    function(){ 
-      $('.popup-thanks') 
-        .css('display', 'block') 
-        .animate({opacity: 1, top: '50%'}, 200); 
-  });
-});
-$('.modal_close, #overlay').click( function(){
-  $('.popup-thanks').animate({opacity: 0, top: '45%'}, 200, 
-      function(){ 
-        $(this).css('display', 'none'); 
-        $('#overlay').fadeOut(400);
-      }
-    );
-});
+    // POPUP THANKS start
+    $('.donate-btn').click(function (event) {
+        event.preventDefault();
+        $('#overlay').fadeIn(400,
+            function () {
+                $('.popup-thanks')
+                    .css('display', 'block')
+                    .animate({ opacity: 1, top: '50%' }, 200);
+            });
+    });
+    $('.modal_close, #overlay').click(function () {
+        $('.popup-thanks').animate({ opacity: 0, top: '45%' }, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#overlay').fadeOut(400);
+            }
+        );
+    });
 
-// POPUP THANKS end
+    // POPUP THANKS end
 
     // HUMBURGER MENU start
     $('.menu-toggle').on('click', function () {
@@ -110,12 +110,12 @@ $('.modal_close, #overlay').click( function(){
     // HUMBURGER MENU end
 
 
-// STYLE FOR MAIN start
+    // STYLE FOR MAIN start
     var heightHeader = $('.header').height();
     $('.main').css('margin-top', heightHeader);
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
     var heightFooter = $('.footer').height();
-// STYLE FOR MAIN end
+    // STYLE FOR MAIN end
 
     // SELECT STYLE start
     $('select').each(function () {
@@ -212,12 +212,12 @@ $('.modal_close, #overlay').click( function(){
 
 
 
-    $('#reloadMoreNews').click(function(event) {
+    $('#reloadMoreNews').click(function (event) {
         event.preventDefault();
         $('#newsContent').append('<article class="news-box"><div class="row align-items-center"><div class="col-12 col-md-5"><a href="#" class="news-box__image"><img src="img/blog/image-6.png" alt=""><div class="news-box__date"><span>27</span><span>11</span><span>18</span></div></a></div><div class="col-12 col-md-7"><div class="news-box__desc"><a href="#">Конференция освежающие  потоки - большой зал </a><p>Открылась новая церковь в г. Черноморск. Всех желающих приглашаем на богослужение. Верим, что Господь Иисус Христос, Сын Божий пришел во плоти, одинаково как Б...</p></div></div></div></article>');
     });
 
-    
+
     // slider slider-watch-also start
     function slideDetect() {
         $('.slider-watch-also').slick({
@@ -273,48 +273,48 @@ $('.modal_close, #overlay').click( function(){
         infinite: false,
         slide: ".col-12",
         responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 577,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
         ]
     });
 
     $('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-			titleSrc: function(item) {
-				return item.el.attr('title');
-			}
-		}
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function (item) {
+                return item.el.attr('title');
+            }
+        }
     });
-    
+
     $('.slider-video').slick({
         dots: false,
         arrow: true,
@@ -366,26 +366,35 @@ $('.modal_close, #overlay').click( function(){
     });
 
 
-    // POPUP start
-$('.video-container').click( function(event){
-    event.preventDefault();
-    $('#overlay').fadeIn(400,
-      function(){ 
-        $('.popup-video-open') 
-          .css('display', 'block') 
-          .animate({opacity: 1, top: '50%'}, 200); 
+    // POPUP video-open start
+
+    var videoSrc;  
+    $('.video-container__video').click(function() {
+        videoSrc = $(this).data( "src" );
+        console.log(videoSrc);
     });
-  });
-  $('.modal_close, #overlay').click( function(){
-    $('.popup-video-open').animate({opacity: 0, top: '45%'}, 200, 
-        function(){ 
-          $(this).css('display', 'none'); 
-          $('#overlay').fadeOut(400);
-        }
-      );
-  });
-  
-  // POPUP end
+
+    $('.video-container__video').click(function (event) {
+        event.preventDefault();
+        $('#overlay').fadeIn(400,
+            function () {
+                $('.popup-video-open')
+                    .css('display', 'block')
+                    .animate({ opacity: 1, top: '50%' }, 200);
+            });
+        $("#video").attr('src',videoSrc + "?autoplay=1" ); 
+    });
+    $('.modal_close, #overlay, .close').click(function () {
+        $('.popup-video-open').animate({ opacity: 0, top: '45%' }, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#overlay').fadeOut(400);
+            }
+        );
+        $("#video").attr('src',videoSrc); 
+    });
+    // POPUP video-open end
+     
 
     $("#cc").inputmask({
         mask: '9999  9999  9999  9999',
@@ -407,22 +416,22 @@ $('.video-container').click( function(event){
         placeholder: 'X'
     });
 
-$('#bank').on('click', function (e) {
-    $('.donate__credit_card').slideToggle();
-    if ($('.donate__bank_account').is(":visible")) {
-        $('.donate__bank_account').slideUp();
-    }
-});
-$('#bil').on('click', function () {
-    $('.donate__bank_account').slideToggle();
+    $('#bank').on('click', function (e) {
+        $('.donate__credit_card').slideToggle();
+        if ($('.donate__bank_account').is(":visible")) {
+            $('.donate__bank_account').slideUp();
+        }
+    });
+    $('#bil').on('click', function () {
+        $('.donate__bank_account').slideToggle();
         if ($('.donate__credit_card').is(":visible")) {
-        $('.donate__credit_card').slideUp();
-    }
-});
+            $('.donate__credit_card').slideUp();
+        }
+    });
 
-$('#privat, #liqpay').on('click', function () {
-    $('.payment-form').slideUp();
-});
+    $('#privat, #liqpay').on('click', function () {
+        $('.payment-form').slideUp();
+    });
 
 
 

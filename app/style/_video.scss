@@ -22,7 +22,7 @@
     position: absolute;
     right: 15px;
     top: -84px;
-    > span {
+    >span {
         display: inline-block;
         margin-right: 14px;
         color: $text-s;
@@ -67,13 +67,9 @@
     font-size: 1rem;
     margin-bottom: 2.2rem;
     position: relative;
-    iframe {
-        width: 100%;
-        height: 13.75rem;
-    }
     &__video {
         width: 100%;
-        height: 13.75rem;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -85,6 +81,7 @@
             background: url(../img/icon/play-btn.png) no-repeat center center;
             width: inherit;
             height: inherit;
+            cursor: pointer;
         }
     }
     &__title {
@@ -93,7 +90,7 @@
         margin-bottom: 0.5rem;
         margin-top: 1.3rem;
     }
-    p{
+    p {
         margin: 0;
         height: 3rem;
         overflow: hidden;
@@ -108,21 +105,95 @@
     }
 }
 
-.popup-video-open{
+.popup-video-open {
     top: 50%;
     left: 50%;
     position: fixed;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
-    padding: 5rem 10rem;
+    padding: 2rem 0;
     background: #000;
-    height: 50vh;
+    height: auto;
     width: 980px;
-    opacity: 0;  
+    opacity: 0;
     z-index: 999;
     text-align: center;
-  }
+    .modal_close {
+        border: 1.5px solid $wh;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .modal-body {
+        width: 100%;
+        color: $wh;
+        font-size: 1.1rem;
+        .video-open {
+            width: 100%;
+            height: 500px;
+            >iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            padding-left: 1.5rem;
+            text-align: left;
+        }
+    }
+    .modal-footer {
+        padding: 0 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .modal-social-icon {
+            display: flex;
+            align-items: center;
+            font-size: .8rem;
+            color: $wh;
+            span {
+                display: inline-block;
+                margin-right: 1rem;
+            }
+            &__item {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                border: 1.5px solid $text-s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 5px;
+                color: $text-s;
+                transition: .3s;
+                &:hover {
+                    background-color: $wh;
+                }
+            }
+        }
+        .close {
+            color: $text-s;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+    .video-container {
+        &__video {
+            .play {
+                background-size: 66px
+            }
+        }
+        &__icon {
+            width: 1.6rem;
+            height: 1.8rem;
+        }
+    }
+}
 
 @media only screen and (max-width: 1440px) {
     .video {
@@ -134,8 +205,7 @@
     }
 }
 
-
-@media only screen and (max-width: 1199.8px){
+@media only screen and (max-width: 1199.8px) {
     .video {
         .first-screen__title {
             >span {
@@ -143,11 +213,20 @@
             }
         }
     }
-
     .video__select {
         top: -68px;
         .select-styled {
             font-size: 1rem;
+        }
+    }
+
+    .popup-video-open {
+        width: 800px;
+        .modal-body {
+            .video-open {
+                width: 100%;
+                height: 350px;
+            }
         }
     }
 }
@@ -158,12 +237,35 @@
         position: static;
         margin-bottom: 26px;
     }
+
+    .popup-video-open {
+        width: 640px;
+        .modal-body {
+            .video-open {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 767.8px) {
-    
+    .popup-video-open {
+        height: auto;
+        width: 95%;
+        .modal-body {
+            .video-open {
+                width: 100%;
+                height: 50vmin;
+                >iframe {
+                    max-width: 80%;
+                    height: 100%;
+                }
+            }
+        }
+        
+    }
 }
-
 
 @media only screen and (max-width: 575.8px) {
     .video {
@@ -178,14 +280,13 @@
             }
         }
     }
-
 }
 
 @media only screen and (max-width: 425px) {
     .video__select {
         flex-direction: column;
         align-items: flex-start;
-        > span {
+        >span {
             margin-right: 0;
             margin-bottom: 8px;
         }
@@ -193,11 +294,60 @@
             width: 100%;
         }
     }
+
+    .popup-video-open {
+        padding: 3rem 0 2rem;
+        height: auto;
+        width: 95%;
+        .modal-body {
+            .video-open {
+                width: 100%;
+                height: 50vmin;
+                >iframe {
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .modal-footer {
+            padding: 0 1rem;
+            flex-direction: column;
+            .modal-social-icon {
+                display: flex;
+                align-items: center;
+                font-size: .8rem;
+                color: $wh;
+                &__item {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .close {
+                display: none;
+            }
+        }
+        
+    }
 }
 
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+
+    .popup-video-open {
+        .modal-body {
+            .video-open {
+                width: 100%;
+                height: 50vmin;
+                >iframe {
+                    max-width: 80%;
+                    height: 100%;
+                }
+            }
+        }   
+    }
+}
 
 @media only screen and (min-width: 2000px) {
-	.video {
+    .video {
         .first-screen__title {
             >span {
                 left: 21%;
