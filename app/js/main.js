@@ -127,20 +127,6 @@ $('.modal_close, #overlay').click( function(){
          $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
      }
 
-
-            var accordion = new Accordion($('#accordion'), false);
-        }
-    });
-
-    // HUMBURGER MENU end
-
-
-// STYLE FOR MAIN start
-    var heightHeader = $('.header').height();
-    $('.main').css('margin-top', heightHeader);
-    $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
-    var heightFooter = $('.footer').height();
-
 // STYLE FOR MAIN end
 
     // SELECT STYLE start
@@ -320,24 +306,6 @@ $('.modal_close, #overlay').click( function(){
             }
         }
         ]
-    });
-
-    $('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-			titleSrc: function(item) {
-				return item.el.attr('title');
-			}
-		}
     });
     
     $('.slider-video').slick({
