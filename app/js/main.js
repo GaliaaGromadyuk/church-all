@@ -9,6 +9,8 @@ $(document).ready(function ($) {
     var mq1000min = window.matchMedia("(min-width: 1000px)");
     var mq991min = window.matchMedia("(min-width: 991px)");
     var mq576 = window.matchMedia("(max-width: 575.8px)");
+    var mq1100 = window.matchMedia("(max-width: 1100px)");
+    var mq900h = window.matchMedia("(max-height: 900px)");
     if (mq991min.matches) {
         $('.link').click(function () {
             if ($(window).scrollTop() < 100) {
@@ -113,9 +115,17 @@ $('.modal_close, #overlay').click( function(){
 
 // STYLE FOR MAIN start
     var heightHeader = $('.header').height();
-    $('.main').css('padding-top', heightHeader);
+    $('.main').css('margin-top', heightHeader);
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
     var heightFooter = $('.footer').height();
+
+     if (mq1100.matches) {
+         $('.first-screen__slide').css('height', 'calc(60vh - ' + heightHeader + 'px)');
+     }
+
+     if (mq576.matches || (mq1100.matches && mq900h.matches)) {
+         $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
+     }
 
 // STYLE FOR MAIN end
 
