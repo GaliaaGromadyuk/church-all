@@ -73,15 +73,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         img {
             width: 100%;
         }
         .play {
             position: absolute;
             background: url(../img/icon/play-btn.png) no-repeat center center;
-            width: inherit;
-            height: inherit;
+            width: 5rem;
+            height: 5rem;
             cursor: pointer;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
     &__title {
