@@ -365,7 +365,6 @@ $(document).ready(function ($) {
     var videoSrc;  
     $('.video-container__video').click(function() {
         videoSrc = $(this).data( "src" );
-        console.log(videoSrc);
     });
 
     $('.video-container__video').click(function (event) {
