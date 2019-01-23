@@ -274,4 +274,16 @@ $primary-color: #5ab206;
 	.donate__bank_account label input{
 		width: 100%;
 	}
+	.popup-thanks h1{
+		font-size: 2rem;
+	}
+	.popup-thanks{
+		padding: 2rem;
+		.social-icon__item{
+			margin: 0 5px;
+		}
+	}
+	.popup-thanks h3 {
+	    font-size: 0.9rem;
+	}
 }

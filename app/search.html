@@ -160,85 +160,140 @@
 		</header>
 <!-- HEADER end -->
 
-		<main class="main music">
-
+		<main class="main search">
+			
 <!-- PATH-PAGE start -->
 	        <section>
 	            <div class="container">
-	                <div class="row justify-content-center">
-	                    <div class="col">
+	                <div class="row justify-content-between">
+	                    <div class="col-sm-6 col-12">
 	                        <div class="path-page">
 	                            <a href="index.html" class="path-page__link">Главная</a>
-	                            <a href="index.html" class="path-page__link">Ресурсы</a>
-	                            <span class="path-page__item">Музыка</span>
+	                            <span class="path-page__item">Контакты</span>
 	                        </div>
+	                    </div>
+	                    <div class="col filter d-flex align-items-center justify-content-start justify-content-sm-end">
+	                    	<span>Показать :</span>
+	                    	<select>
+	                    		<option value="Все">Все</option>
+	                    		<option value="Музыка">Музыка</option>
+	                    		<option value="Мероприятия">Мероприятия</option>
+	                    	</select>
 	                    </div>
 	                </div>
 	            </div>
 	        </section>
 <!-- PATH-PAGE end -->
 
-<!-- MUSIC CONTENT start -->
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-10 col-12">
-						<div class="music__content">
-							<h1 class="page-title">Музыка</h1>
-							<div class="music-list">
-								<div class="music-list__item">
-									<h3 class="music__name">Название.Как жить холостым, неженатым</h3>
-									<audio controls>
-									  <source src="audio/edvard-grieg_-_suite-no-1-op-46-i-morning-mood.mp3" type="audio/mpeg">
-									Your browser does not support the audio element.
-									</audio>
-									<div class="music__about">
-											<span class="music__autor">Автор: Имя Автора, </span>
-											<span class="music__date">Дата: Декабрь 19, 2018</span>
-									</div>
+		<section class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-10 col-12">
+					<div class="search__content">
+						<div class="search__form">
+							<input type="text" class="searchTerm" placeholder="Название">
+						    <button type="submit" class="searchButton">
+						        <i class="fa fa-search"></i> <span>ПОИСК</span>
+						    </button>
+						</div>
+						<div class="search-results">
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/musical-note.svg" alt="music note">
 								</div>
-								<div class="music-list__item">
-									<h3 class="music__name">Название.Как жить холостым, неженатым</h3>
-									<audio controls>
-									  <source src="audio/edvard-grieg_-_suite-no-1-op-46-i-morning-mood.mp3" type="audio/mpeg">
-									Your browser does not support the audio element.
-									</audio>
-									<div class="music__about">
-											<span class="music__autor">Автор: Имя Автора, </span>
-											<span class="music__date">Дата: Декабрь 19, 2018</span>
-									</div>
+								<a href="#" class="search-result__name">Название песни. Как жить холостым, неженатым Йоаким Люндквист</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/calendar.png" alt="calendar">
 								</div>
-								<div class="music-list__item">
-									<h3 class="music__name">Название.Как жить холостым, неженатым</h3>
-									<audio controls>
-									  <source src="audio/edvard-grieg_-_suite-no-1-op-46-i-morning-mood.mp3" type="audio/mpeg">
-									Your browser does not support the audio element.
-									</audio>
-									<div class="music__about">
-											<span class="music__autor">Автор: Имя Автора, </span>
-											<span class="music__date">Дата: Декабрь 19, 2018</span>
-									</div>
+								<a href="#" class="search-result__name">Название мероприятия</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/edit.svg" alt="edit">
 								</div>
-								<div class="music-list__item">
-									<h3 class="music__name">Название.Как жить холостым, неженатым</h3>
-									<audio controls>
-									  <source src="audio/edvard-grieg_-_suite-no-1-op-46-i-morning-mood.mp3" type="audio/mpeg">
-									Your browser does not support the audio element.
-									</audio>
-									<div class="music__about">
-											<span class="music__autor">Автор: Имя Автора, </span>
-											<span class="music__date">Дата: Декабрь 19, 2018</span>
-									</div>
+								<a href="#" class="search-result__name">Название объявления</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/video-player.svg" alt="video-player">
 								</div>
-								<div id="reloadMoreNews" class="reload-more"><span><img src="img/icon/reload.svg" alt="reload"></span>Загрузить больше</div>
+								<a href="#" class="search-result__name">Название видео</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/chat.svg" alt="music note">
+								</div>
+								<a href="#" class="search-result__name">Название новости</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/picture (2).svg" alt="music note">
+								</div>
+								<a href="#" class="search-result__name">Название фото</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/musical-note.svg" alt="music note">
+								</div>
+								<a href="#" class="search-result__name">Название песни. Как жить холостым, неженатым Йоаким Люндквист</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/calendar.png" alt="calendar">
+								</div>
+								<a href="#" class="search-result__name">Название мероприятия</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/edit.svg" alt="edit">
+								</div>
+								<a href="#" class="search-result__name">Название объявления</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/video-player.svg" alt="video-player">
+								</div>
+								<a href="#" class="search-result__name">Название видео</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/chat.svg" alt="music note">
+								</div>
+								<a href="#" class="search-result__name">Название новости</a>
+							</div>
+							<div class="search-result">
+								<div class="search-result__icon">
+									<img src="img/icon/picture (2).svg" alt="music note">
+								</div>
+								<a href="#" class="search-result__name">Название фото</a>
 							</div>
 						</div>
-						<!-- /.music__content -->
+						<!-- /.search-results -->
+<!-- pagination start -->
+				        <section>
+	                        <nav>
+	                            <ul class="page-pagination list-style-none">
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link page-pagination__link_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link">1</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link active">2</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link">3</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link">4</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link page-pagination__link_empty">...</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link">10</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link">11</a></li>
+	                                <li class="page-pagination__item"><a href="#" class="page-pagination__link page-pagination__link_next"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+	                            </ul>
+	                        </nav>
+				        </section>
+	 <!-- pagination end -->
 					</div>
+					<!-- /.search__content -->
 				</div>
-				<!-- /.row -->
+				<!-- /.col-10 -->
 			</div>
-			<!-- /.container -->
-<!-- MUSIC CONTENT end -->
+			<!-- /.row -->
+		</section>
 
 <!-- watch-also start -->
         <article class="watch-also">
@@ -379,7 +434,6 @@
 		</footer>
 <!-- FOOTER end -->
 		<script src="libs/jquery-3.3.1.min.js"></script>
-		<script src="libs/jquery.inputmask.bundle.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

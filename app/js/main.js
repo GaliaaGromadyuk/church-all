@@ -8,6 +8,10 @@ $(document).ready(function ($) {
     // FIXED MENU start
     var mq1000min = window.matchMedia("(min-width: 1000px)");
     var mq991min = window.matchMedia("(min-width: 991px)");
+    var mq576 = window.matchMedia("(max-width: 575.8px)");
+    var mq1100 = window.matchMedia("(max-width: 1100px)");
+    var mq900h = window.matchMedia("(max-height: 900px)");
+
     if (mq991min.matches) {
         $('.link').click(function () {
             if ($(window).scrollTop() < 100) {
@@ -29,7 +33,6 @@ $(document).ready(function ($) {
                 });
             }
         });
-
 
 
         $(window).on('scroll', function () {
@@ -115,7 +118,17 @@ $(document).ready(function ($) {
     $('.main').css('margin-top', heightHeader);
     $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
     var heightFooter = $('.footer').height();
-    // STYLE FOR MAIN end
+
+     if (mq1100.matches) {
+         $('.first-screen__slide').css('height', 'calc(60vh - ' + heightHeader + 'px)');
+     }
+
+     if (mq576.matches || (mq1100.matches && mq900h.matches)) {
+         $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
+     }
+
+// STYLE FOR MAIN end
+
 
     // SELECT STYLE start
     $('select').each(function () {
@@ -297,24 +310,6 @@ $(document).ready(function ($) {
         ]
     });
 
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function (item) {
-                return item.el.attr('title');
-            }
-        }
-    });
-
     $('.slider-video').slick({
         dots: false,
         arrow: true,
@@ -340,7 +335,7 @@ $(document).ready(function ($) {
     });
     // slider page church_services-open end
 
-    // slider page sesources
+    // slider page resources
     $('.resources-slider').slick({
         dots: false,
         arrow: true,
@@ -364,7 +359,6 @@ $(document).ready(function ($) {
         }
         ]
     });
-
 
     // POPUP video-open start
 
@@ -396,6 +390,27 @@ $(document).ready(function ($) {
     // POPUP video-open end
      
 
+
+// CALENDAR start
+    
+    $('.calendar-event:nth-child(2n)').children(".calendar-event__information").addClass('order-2');
+    $('.calendar-event:nth-child(2n)').children(".calendar-event__date").addClass('order-1');
+
+    $('.calendar-event:odd').addClass('calendar-event__right');
+    $('.calendar-event:even').addClass('calendar-event__left');
+
+
+    if (mq576.matches) {
+        $('.calendar-event:odd').removeClass('calendar-event__right');
+        $('.calendar-event:even').removeClass('calendar-event__left');
+
+        $('.calendar-event:even').children(".calendar-event__information").addClass('order-2');
+        $('.calendar-event:even').children(".calendar-event__date").addClass('order-1');
+    }
+
+// CALENDAR end
+
+
     $("#cc").inputmask({
         mask: '9999  9999  9999  9999',
         placeholder: 'X'
@@ -416,6 +431,7 @@ $(document).ready(function ($) {
         placeholder: 'X'
     });
 
+
     $('#bank').on('click', function (e) {
         $('.donate__credit_card').slideToggle();
         if ($('.donate__bank_account').is(":visible")) {
@@ -433,6 +449,24 @@ $(document).ready(function ($) {
         $('.payment-form').slideUp();
     });
 
+    
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
 
 
 });
