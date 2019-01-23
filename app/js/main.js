@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     var mq576 = window.matchMedia("(max-width: 575.8px)");
     var mq1100 = window.matchMedia("(max-width: 1100px)");
     var mq900h = window.matchMedia("(max-height: 900px)");
+
     if (mq991min.matches) {
         $('.link').click(function () {
             if ($(window).scrollTop() < 100) {
@@ -32,7 +33,6 @@ $(document).ready(function ($) {
                 });
             }
         });
-
 
 
         $(window).on('scroll', function () {
@@ -126,6 +126,20 @@ $('.modal_close, #overlay').click( function(){
      if (mq576.matches || (mq1100.matches && mq900h.matches)) {
          $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
      }
+
+
+            var accordion = new Accordion($('#accordion'), false);
+        }
+    });
+
+    // HUMBURGER MENU end
+
+
+// STYLE FOR MAIN start
+    var heightHeader = $('.header').height();
+    $('.main').css('margin-top', heightHeader);
+    $('.first-screen__slide').css('height', 'calc(100vh - ' + heightHeader + 'px)');
+    var heightFooter = $('.footer').height();
 
 // STYLE FOR MAIN end
 
@@ -306,6 +320,24 @@ $('.modal_close, #overlay').click( function(){
             }
         }
         ]
+    });
+
+    $('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		}
     });
     
     $('.slider-video').slick({
