@@ -479,7 +479,15 @@
                 font-size: 1.4rem;
                 padding-left: 10vw;
             } 
-        }
+		}
+		&__link {
+			justify-content: center;
+			.social-icon__item {
+				&:last-child {
+					margin-right: 1rem;
+				}
+			}
+		}
     }
     .home .news .block-footer{
     	padding-top: 4rem;
@@ -561,6 +569,8 @@
 	}
 	
 	.page-pagination {
+		margin-bottom: 3rem;
+		margin-top: 1rem;
         &__item {
             margin: 0 2px;
         }
