@@ -144,6 +144,8 @@ $select-height: 40px;
 	font-size: 0.8rem;
 	z-index: 2;
   	transition: all 0.2s ease-in;
+  	display: flex;
+    align-items: center;
   &:after {
     content:"";
     width: 0;
@@ -362,6 +364,9 @@ button.is-active {
 	.header-col{
 		display: flex;
 	}
+	.header-enter{
+	    display: none;
+	}
 	.accordion{
 		width: 100%;
 		align-items: center;
@@ -396,6 +401,16 @@ button.is-active {
 		}
 		.header-language{
 			display: none;
+		}
+		.header-enter{
+			border: solid 1px #ffffff;
+		    border-radius: 10rem;
+		    width: 45px;
+		    height: 45px;
+		    display: flex;
+		    svg{
+		    	fill: $wh;
+		    }
 		}
 	}
 	.header-btn{
@@ -790,6 +805,7 @@ button.is-active {
 	}
 	.social-icon__items{
 		position: static;
+	    padding-top: 1.25rem;
 	}
 }
 
