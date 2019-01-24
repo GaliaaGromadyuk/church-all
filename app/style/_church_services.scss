@@ -67,10 +67,6 @@
     }
 }
 
-.church_services-section {
-    padding-bottom: 3rem;
-}
-
 @media only screen and (max-width: 1519.8px) {
     .church-services-content {
         &__img {
@@ -130,6 +126,7 @@
     }
 
     .church-services-content {
+        margin-bottom: 2.5rem;
         flex-direction: column;
         &__img {
             width: 90%;
