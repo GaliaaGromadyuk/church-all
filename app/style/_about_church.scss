@@ -53,12 +53,6 @@
 .about-church-desc__right,
 .about-church-desc__left {
     margin-bottom: 1.5rem;
-    &:hover {
-        .about-church__read-more {
-            width: 240px;
-            color: #fff;
-        }
-    }
 }
 
 .about-church__text {
@@ -116,7 +110,9 @@
 
     .about-church__img {
         .about-church__read-more {
-            padding: 2rem 0;
+            padding: 1rem 0;
+            width: 12rem;
+            color: $wh;
         }
     }
     
@@ -150,7 +146,7 @@
         margin: 0 auto 20px;
         .about-church__read-more {
             display: block;
-            padding: 2.4rem 0;
+            padding: 0.8rem 0;
             bottom: 1rem;
         }
     }
@@ -174,4 +170,16 @@
         width: 100%;
     }
     
+}
+
+@media only screen and (min-width: 1200px) {
+    .about-church-desc__right,
+    .about-church-desc__left {
+        &:hover {
+            .about-church__read-more {
+                width: 240px;
+                color: #fff;
+            }
+        }
+    }
 }
