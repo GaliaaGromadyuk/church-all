@@ -1034,7 +1034,10 @@ button.is-active {
         &_next {
             color: $text-s;
             font-size: 1.6rem;
-            border: none;
+			border: none;
+			&:hover {
+				color: $main !important;
+			}
         }
         &_empty {
             border: none;
