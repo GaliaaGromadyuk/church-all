@@ -145,6 +145,32 @@
     }
 }
 
+.animate {
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+
+    100% {
+        transform: rotate(-1080deg);
+        -webkit-transform: rotate(-1080deg);
+        -moz-transform: rotate(-1080deg);
+        -ms-transform: rotate(-1080deg);
+        -o-transform: rotate(-1080deg);
+}
+
+}
+
 
 
 @media only screen and (max-width: 1199.8px) {
