@@ -1,12 +1,5 @@
 .calendar{
 	.pointing-down{
-		// height: 42px;
-		// width:  42px;
-		// border-radius: 50%;
-		// background: $main;
-		// display: flex;
-		// justify-content: center;
-		// align-items: center;
 		z-index: 2;
 		margin: 0 auto;
 		margin-top: 2.5rem;
@@ -202,6 +195,10 @@
 				color: $main-s;
 			}
 		}
+	}
+	.reload-more{
+		    margin: 1rem auto;
+		    margin-bottom: 4rem;
 	}
 
 }

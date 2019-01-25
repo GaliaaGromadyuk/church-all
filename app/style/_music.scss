@@ -1,7 +1,7 @@
 .music{
 	&__content{
 		background: $wh;
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 	}
 	&-list{
 		padding: 2rem 6rem;
@@ -40,6 +40,9 @@
 	.music{
 		&-list{
 			padding: 2rem 1rem;
+		}
+		&__content{
+			margin-bottom: 2rem;
 		}
 	}
     
