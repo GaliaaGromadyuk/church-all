@@ -270,6 +270,7 @@
 		        background: none;
 			    box-shadow: none;
 			    border: 1px solid white;
+		        margin-left: 0;
 				svg{
 					margin-right: 0;
 				}
@@ -283,6 +284,7 @@
 		}
 		&-right{
 			display: flex;
+			justify-content: flex-end;
 		}
 		&-search {
 			display: none;
@@ -398,6 +400,9 @@
 		height:90vh;
 	}
 	.header .search-mob{
+		display: block;
+	}
+	.header-enter{
 		display: none;
 	}
 	.header .header-btn {
@@ -414,6 +419,11 @@
 	}
 	.header-navigation .mobile-btn{
 		display: flex;
+		.header-enter{
+			display: flex;
+		    width: 45px;
+		    justify-content: center;
+		}
 	}
 	.header-menu ul li a{
 			padding-bottom: 0.75rem;
@@ -423,6 +433,11 @@
 		width:45px;
 		margin: 0 15px;
 		z-index: 2;
+	}
+	.header .search-mob input[type=search]{
+		left: auto;
+		right: 0;
+		z-index: 999;
 	}
 	.home{
 		.first-screen-text{
@@ -451,10 +466,10 @@
 	}
 	.footer{
 		.communication{
-			padding-bottom: 3.75rem;
+			padding-bottom: 1rem;
 		}
 		.social{
-			padding-top: 2.375rem;
+			padding-top: 1rem;
 			border-top: 1px solid  #e4e4e4;
 		}
 	}
