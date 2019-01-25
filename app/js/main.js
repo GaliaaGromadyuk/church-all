@@ -517,7 +517,7 @@ r(function(){
     $(function(){
 		$('#reloadMoreNews').click(function () {
             $('.reload-more span img').addClass("animate");
-            setTimeout(RemoveClass, 3000);
+            setTimeout(RemoveClass, 6000);
             });
             function RemoveClass() {
             $('.reload-more span img').removeClass("animate");

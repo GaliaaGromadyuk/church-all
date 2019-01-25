@@ -135,6 +135,7 @@
         transition: 0.4s;
         >img{
             width: 60%;
+            transition: .5s
         }
     }
     &:hover {
@@ -146,10 +147,8 @@
 }
 
 .animate {
-    animation-name: rotate;
-    animation-duration: 4s;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
+    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -162,11 +161,11 @@
 }
 
     100% {
-        transform: rotate(-1080deg);
-        -webkit-transform: rotate(-1080deg);
-        -moz-transform: rotate(-1080deg);
-        -ms-transform: rotate(-1080deg);
-        -o-transform: rotate(-1080deg);
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
 }
 
 }
