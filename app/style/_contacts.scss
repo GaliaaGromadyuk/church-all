@@ -1,6 +1,6 @@
 .contacts{
 	&__content{
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 		.page-title{
 			text-align: left;
 		    padding: 2.5rem 0;
@@ -35,6 +35,7 @@
 		padding-top: 1rem;
 	}
 	.communication-social{
+		margin-bottom: 1rem;
 		img{
 			max-width: 1.7rem;
 		}
@@ -158,6 +159,9 @@
 
 @media (max-width : 575.8px)   {
 	.contacts{
+		&__content{
+			margin-bottom: 2rem;
+		}
 		.transport__item{
 			justify-content: flex-start;
 		}

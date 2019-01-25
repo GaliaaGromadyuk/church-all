@@ -31,9 +31,9 @@
 	}
 	&__content{
 		background: $wh;
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 		padding-top: 2rem;
-		padding-bottom: 5rem;
+		padding-bottom: 3rem;
 	}
 	&__form{
 		position: relative;
@@ -142,5 +142,8 @@
 	}
 	.filter{
 		margin-bottom: 1rem;
+	}
+	.search__content{
+		margin-bottom: 2rem;
 	}
 }

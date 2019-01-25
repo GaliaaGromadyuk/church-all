@@ -1,6 +1,6 @@
 .donate{
 	&__block{
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 	}
 	&__content{
 		background: $wh;
@@ -130,19 +130,13 @@
 				width: 47%;
 				span{
 					display: block;
-					&:last-child{
-						display: inline-block;
-						margin-bottom: 0;
-						font-size: 0.75rem;
-						max-width: 9rem;
-					}
 				}
 				input{
 					width: 100%;
 				}
-				&:last-child input{
-					width: 50%;
-				}
+				// &:last-child input{
+				// 	width: 50%;
+				// }
 			}
 			.btn{
 				padding: 1rem 3rem;
@@ -235,6 +229,9 @@ $primary-color: #5ab206;
 	    width: 16rem;
 	    padding: 1.5rem;
         margin-bottom: 1rem;
+	}
+	.donate__block{
+		margin-bottom: 2rem;
 	}
 	.donate__credit_card .card-term{
 		margin-top: 0.5rem;
