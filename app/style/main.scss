@@ -949,10 +949,10 @@ button.is-active {
             color: $main;
         }
         &::after {
-            content: '/';
-            padding-left: 10px;
-            color: $text-light;
-        }
+			content: '/';
+			padding-left: 10px;
+			color: $text-light;
+		}
     }
 }
 
@@ -1008,6 +1008,7 @@ button.is-active {
         }
     }
 }
+
 
 // pagination
 .page-pagination {
